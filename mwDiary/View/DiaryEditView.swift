@@ -21,14 +21,15 @@ struct DiaryEditView: View {
     
     @AppStorage("defaultTitle") var defaultTitle = "My daily mood"
     @AppStorage("defaultBody") var defaultBody = ""
-    
+    @AppStorage("fontStyle") var fontStyleStr:FontType = .Default
     
     var body: some View{
-        NavigationView {
+//        NavigationView {
             VStack{
                     Group{
                         //MARK: - 输入框
-                        MyTextFieldWithUIKit(text: $editTitle, placeholder: defaultTitle, isFirstResponder: $beginEditTitle)
+                        MyTextFieldWithUIKit(text: $editTitle, placeholder: defaultTitle, titleUIFont: fontStyleStr.titleUIFont, isFirstResponder: $beginEditTitle)
+//                            .font(fontStyleStr.titleFont)
                             .frame(height: 56,alignment: .center)
                             .overlay( RoundedRectangle(cornerRadius: 10, style: .continuous)
                                 .stroke(.primary, lineWidth: 3)
@@ -36,6 +37,7 @@ struct DiaryEditView: View {
                             .padding(.top,20)
                         TextEditor(text: $editText)
                             .focused($isInputActive)
+                            .font(fontStyleStr.bodyFont)
                             //MARK: - 键盘按键定制
                             .toolbar {
                                 ToolbarItem(placement: .keyboard) {
@@ -95,7 +97,7 @@ struct DiaryEditView: View {
                             .buttonStyle(.borderedProminent)
                         }
                     }
-                }
+//                }
             .padding(.horizontal)
             .navigationBarTitleDisplayMode(.inline)
         }.navigationViewStyle(StackNavigationViewStyle())

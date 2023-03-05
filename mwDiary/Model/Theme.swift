@@ -10,6 +10,7 @@ import SwiftUI
 
 
 //MARK: - Theme
+
 struct Theme : Identifiable{
     var id = UUID()
     var name:String {

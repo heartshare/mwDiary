@@ -11,6 +11,7 @@ struct DiaryCardLayOutView: View {
     //MARK: - Appearance
     @AppStorage("appTheme") var appTheme:ThemeType = .Automatic
     @AppStorage("heartColor") var appHeartColor:HeartColorType = .yellow
+    //    @AppStorage("fontStyle") var fontStyleStr:FontType = .Default
     //    @ObservedObject var diary:DiaryEntity
     
     var e_create_date:Date = Date()
@@ -18,29 +19,30 @@ struct DiaryCardLayOutView: View {
     var e_title:String = "i am title "
     var e_body:String = "This is a preview window, tap to change the list layout ."
     var e_isFav:Bool = true
-    var layoutIndex:Int = 2
+    var layoutIndex:Int = 1
+    var fontStyleString:FontType = .Default
     var isFirstDiaryOfDay:Bool = true
     
     var body: some View {
         switch layoutIndex {
         case 1:
-            cardView1
-        case 2:
-            cardView2
-        case 3:
-            cardView3
-        case 4:
             cardView4
-        case 5:
+        case 2:
             cardView5
-        case 6:
+        case 3:
             cardView6
-        default:
+        case 4:
+            cardView1
+        case 5:
             cardView2
+        case 6:
+            cardView3
+        default:
+            cardView4
         }
     }
     
-  //MARK: - LayOut1
+    //MARK: - LayOut1
     var cardView1 : some View {
         HStack(spacing:10){
             caleView1
@@ -81,11 +83,13 @@ struct DiaryCardLayOutView: View {
         HStack(spacing:4){
             VStack(alignment:.leading, spacing:8){
                 Text(e_title )
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+                //                    .font(.subheadline)
+                //                    .fontWeight(.semibold)
+                    .font(fontStyleString.titleFont)
                     .lineLimit(1)
                 Text(e_body )
-                    .font(.footnote)
+                    .font(fontStyleString.bodyFont)
+                //                    .font(.footnote)
                     .lineLimit(1)
                     .padding(.bottom,3)
             }.frame(maxWidth: .infinity,alignment: .leading)
@@ -123,7 +127,7 @@ struct DiaryCardLayOutView: View {
     var caleView2 : some View {
         VStack(spacing: 0){
             Text(e_create_date.getDayInWeek() )
-                //MARK: - 日历上半部字体
+            //MARK: - 日历上半部字体
                 .foregroundColor(Color.white)
                 .font(.subheadline)
                 .fontWeight(.semibold)
@@ -157,11 +161,13 @@ struct DiaryCardLayOutView: View {
         HStack(spacing:4){
             VStack(alignment:.leading, spacing:8){
                 Text(e_title )
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+                    .font(fontStyleString.titleFont)
+                //                    .font(.subheadline)
+                //                    .fontWeight(.semibold)
                     .lineLimit(1)
                 Text(e_body )
-                    .font(.footnote)
+                    .font(fontStyleString.bodyFont)
+                //                    .font(.footnote)
                     .lineLimit(1)
                     .padding(.bottom,3)
             }.frame(maxWidth: .infinity,alignment: .leading)
@@ -181,7 +187,7 @@ struct DiaryCardLayOutView: View {
         .background(appTheme.backColor)
         .cornerRadius(10)
         .frame(maxWidth:.infinity , alignment: .leading)
-//        .shadow(color:.gray,radius: 2,x: 4,y:5)
+        //        .shadow(color:.gray,radius: 2,x: 4,y:5)
         .overlay(
             RoundedRectangle(cornerRadius: 10,style: .continuous)
                 .stroke(.black,lineWidth: 1)
@@ -195,18 +201,18 @@ struct DiaryCardLayOutView: View {
         HStack(spacing:0){
             caleView3
             textView3
-        }.frame(height: 63)
+        }.frame(height: 70)
     }
     var caleView3 : some View {
         VStack(spacing: 0){
-
+            
             Text(e_create_date.getDayInWeek() )
-                //MARK: - 日历上半部字体
+            //MARK: - 日历上半部字体
                 .foregroundColor(Color.white)
                 .font(.subheadline)
                 .fontWeight(.semibold)
-                .padding(.top,6)
-                .padding(.bottom,3)
+                .padding(.top,8)
+                .padding(.bottom,4)
             Text(
                 dateFormatterMMdd.string(from: e_create_date )
             )
@@ -219,28 +225,30 @@ struct DiaryCardLayOutView: View {
             //MARK: - 日历下半部background
             .background {appTheme.backColor3}
             .border(.black)
-//            .overlay(
-//                RoundedRectangle(cornerRadius: 11)
-//                    .stroke(Color.black,lineWidth: 2)
-//            )
-//            .cornerRadius(10)
+            //            .overlay(
+            //                RoundedRectangle(cornerRadius: 11)
+            //                    .stroke(Color.black,lineWidth: 2)
+            //            )
+            //            .cornerRadius(10)
         }
         //MARK: - 日历上半部background
         .background(content: {
             appTheme.backColor2
         })
         .frame(width: 48)
-//        .cornerRadius(12)
+        //        .cornerRadius(12)
     }
     var textView3 : some View {
         HStack(spacing:4){
             VStack(alignment:.leading, spacing:8){
-                Text(e_title )
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+                Text(e_title)
+                    .font(fontStyleString.titleFont)
+                //                    .font(.subheadline)
+                //                    .fontWeight(.semibold)
                     .lineLimit(1)
                 Text(e_body )
-                    .font(.footnote)
+                    .font(fontStyleString.bodyFont)
+                //                    .font(.footnote)
                     .lineLimit(1)
                     .padding(.bottom,3)
             }.frame(maxWidth: .infinity,alignment: .leading)
@@ -258,14 +266,14 @@ struct DiaryCardLayOutView: View {
         .padding(10)
         //MARK: - 文字板background
         .background(appTheme.backColor)
-//        .cornerRadius(10)
-        .frame(maxWidth:.infinity , alignment: .leading)
+        //        .cornerRadius(10)
+        .frame(maxWidth:.infinity,maxHeight: 70 , alignment: .leading)
         .border(.black)
-//        .shadow(color:.gray,radius: 2,x: 4,y:5)
-//        .overlay(
-//            RoundedRectangle(cornerRadius: 10,style: .continuous)
-//                .stroke(.black,lineWidth: 1)
-//        )
+        //        .shadow(color:.gray,radius: 2,x: 4,y:5)
+        //        .overlay(
+        //            RoundedRectangle(cornerRadius: 10,style: .continuous)
+        //                .stroke(.black,lineWidth: 1)
+        //        )
     }
     
     
@@ -278,16 +286,18 @@ struct DiaryCardLayOutView: View {
             textView4
         }
     }
-
+    
     var textView4 : some View {
         HStack(spacing:4){
             VStack(alignment:.leading, spacing:8){
                 Text(e_title )
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+                    .font(fontStyleString.titleFont)
+                //                    .font(.subheadline)
+                //                    .fontWeight(.semibold)
                     .lineLimit(1)
                 Text(e_body )
-                    .font(.footnote)
+                    .font(fontStyleString.bodyFont)
+                //                    .font(.footnote)
                     .lineLimit(2)
                     .padding(.bottom,3)
             }.frame(maxWidth: .infinity,alignment: .leading)
@@ -307,7 +317,7 @@ struct DiaryCardLayOutView: View {
         .background(appTheme.backColor)
         .cornerRadius(10)
         .frame(maxWidth:.infinity , alignment: .leading)
-//        .shadow(color:.gray,radius: 2,x: 4,y:5)
+        //        .shadow(color:.gray,radius: 2,x: 4,y:5)
         .overlay(
             RoundedRectangle(cornerRadius: 10,style: .continuous)
                 .stroke(.black,lineWidth: 1)
@@ -321,16 +331,18 @@ struct DiaryCardLayOutView: View {
             textView5
         }
     }
-
+    
     var textView5 : some View {
         HStack(spacing:4){
             VStack(alignment:.leading, spacing:8){
                 Text(e_title )
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+                    .font(fontStyleString.titleFont)
+                //                    .font(.subheadline)
+                //                    .fontWeight(.semibold)
                     .lineLimit(1)
                 Text(e_body )
-                    .font(.footnote)
+                    .font(fontStyleString.bodyFont)
+                //                    .font(.footnote)
                     .lineLimit(2)
                     .padding(.bottom,3)
             }.frame(maxWidth: .infinity,alignment: .leading)
@@ -351,11 +363,11 @@ struct DiaryCardLayOutView: View {
         .cornerRadius(10)
         .frame(maxWidth:.infinity , alignment: .leading)
         .border(.black)
-//        .shadow(color:.gray,radius: 2,x: 4,y:5)
-//        .overlay(
-//            RoundedRectangle(cornerRadius: 10,style: .continuous)
-//                .stroke(.black,lineWidth: 1)
-//        )
+        //        .shadow(color:.gray,radius: 2,x: 4,y:5)
+        //        .overlay(
+        //            RoundedRectangle(cornerRadius: 10,style: .continuous)
+        //                .stroke(.black,lineWidth: 1)
+        //        )
     }
     
     
@@ -367,31 +379,33 @@ struct DiaryCardLayOutView: View {
             textView6
         }
     }
-
+    
     var textView6 : some View {
         HStack(spacing:4){
             VStack(alignment:.leading, spacing:5){
                 HStack {
                     Text("\(dateFormatterMMdd.string(from: e_create_date)) \(e_create_date.getDayInWeek()) / \(e_title)")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
+                        .font(fontStyleString.titleFont)
+                    //                        .font(.subheadline)
+                    //                        .fontWeight(.semibold)
                         .frame(maxWidth: .infinity,alignment: .leading)
-                    .lineLimit(1)
+                        .lineLimit(1)
                     Image(systemName: "heart.fill")
                         .font(.headline)
                         .frame(width: 50,alignment: .center)
-//                        .frame(maxWidth: .infinity,alignment: .trailing)
+                    //                        .frame(maxWidth: .infinity,alignment: .trailing)
                         .foregroundColor(e_isFav ? appHeartColor.SwiftUiColor: .clear)
                 }
                 Text(e_body )
-                    .font(.footnote)
+                    .font(fontStyleString.bodyFont)
+                //                    .font(.footnote)
                     .lineLimit(4)
                     .padding(.bottom,3)
             }
-//            .background(appTheme.sysBack)
+            //            .background(appTheme.sysBack)
             .frame(maxWidth: .infinity,alignment: .leading)
             
-           
+            
         }
         .padding(.horizontal,10)
         
@@ -403,7 +417,7 @@ struct DiaryCardLayOutView: View {
     
     
     
-
+    
 }
 
 
@@ -414,7 +428,7 @@ struct DiaryCardLayOutView_Previews: PreviewProvider {
                 .previewLayout(.sizeThatFits)
             DiaryCardLayOutView(e_isFav: true,layoutIndex: 6)
                 .previewLayout(.sizeThatFits)
-//                .preferredColorScheme(.dark)
+            //                .preferredColorScheme(.dark)
         }
     }
 }

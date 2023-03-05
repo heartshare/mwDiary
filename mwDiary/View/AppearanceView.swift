@@ -23,9 +23,10 @@ struct AppearanceListCell: View {
 struct AppearanceView: View {
     
     @AppStorage("appTheme") var appTheme:ThemeType = .Automatic
+    @AppStorage("fontStyle") var fontStyleStr:FontType = .Default
     @AppStorage("heartColor") var appHeartColor:HeartColorType = .yellow
     @AppStorage("smallTitle") var smallTitle:Bool = false
-    @AppStorage("cardLayout") var cardLayout:Int = 2
+    @AppStorage("cardLayout") var cardLayout:Int = 1
     @EnvironmentObject var diaryvm:DiaryViewMode
     
     private var navTitle = "Appearance"
@@ -41,9 +42,16 @@ struct AppearanceView: View {
     private let themes:[Theme] = [
         Theme(theme: .Automatic),
         Theme(theme: .Light),
-        Theme(theme: .Dark),
+        Theme(theme: .Dark)
         //        Theme(theme: .rainbow)
     ]
+    
+    public let fontstyles:[FontStyle]=[
+        FontStyle(font: .Default),
+        FontStyle(font: .SmileySans),
+        FontStyle(font: .Mono)
+    ]
+    
     
     @State var isplay = false
     private let heartColors:[HeartColor] = [HeartColor(color: .primary),
@@ -56,130 +64,146 @@ struct AppearanceView: View {
     
     
     
-    
-    
-    
     var body: some View {
-        
-        NavigationView {
-            
-            List{
-                Group{
-                    //MARK: - change ColorTheme
-                    Section {
-                        VStack(alignment:.leading,spacing: 0){
-                            ForEach(themes) { theme in
-                                HStack{
-                                    Label(theme.name, systemImage: theme.icon)
-                                        .labelStyle(.titleAndIcon)
-                                        .font(.headline)
-                                        .padding(.leading)
-                                    Spacer()
-                                    Image(systemName: "checkmark")
-                                        .opacity(appTheme == theme.theme ? 1 : 0)
-                                        .padding(.trailing)
-                                }
-                                .frame(height: 50)
-                                //用于点击
-                                .background(Color(.systemBackground).opacity(0.01))
-                                .onTapGesture {
-                                    withAnimation(.easeOut) {
-                                        appTheme = theme.theme
-                                    }
-                                }
-                            }
-                        }
-                    } header: {
-                        Text("THEMES")
-                    }
-                    
-                    //MARK: - change icon
-                    Section{
-                        ScrollView(.horizontal){
+        //        NavigationView {
+        List{
+            Group{
+                //MARK: - change ColorTheme
+                Section {
+                    VStack(alignment:.leading,spacing: 0){
+                        ForEach(themes) { theme in
                             HStack{
-                                ForEach(icons){ icon in
-                                    Button {
-                                        UIApplication.shared.setAlternateIconName(icon.iconName)
-                                    } label: {
-                                        Image(icon.logoName)
-                                            .resizable()
-                                            .frame(width: 88, height: 88)
-                                            .cornerRadius(20)
-                                            .padding()
-                                    }
+                                Label(theme.name, systemImage: theme.icon)
+                                    .labelStyle(.titleAndIcon)
+                                    .font(.headline)
+                                    .padding(.leading)
+                                Spacer()
+                                Image(systemName: "checkmark")
+                                    .opacity(appTheme == theme.theme ? 1 : 0)
+                                    .padding(.trailing)
+                            }
+                            .frame(height: 50)
+                            //用于点击
+                            .background(Color(.systemBackground).opacity(0.01))
+                            .onTapGesture {
+                                withAnimation(.easeOut) {
+                                    appTheme = theme.theme
                                 }
                             }
                         }
-                    } header: {
-                        Text("APP ICON")
                     }
-                    
-                    //MARK: - change favcolor
-                    Section{
-                        ScrollView(.horizontal,showsIndicators:false){
-                            HStack(spacing:0){
-                                ForEach(heartColors){ item in
-                                    Button {
-                                        appHeartColor = item.color
-                                    } label: {
-                                        Image(systemName: "heart.fill")
-                                            .font(.title)
-                                            .foregroundColor(item.color.SwiftUiColor)
-                                            .frame(width: 45, height: 45)
-                                            .cornerRadius(20)
-                                            .padding(.vertical)
-                                            .padding(.horizontal,15)
-                                            .overlay{
-                                                if item.color == appHeartColor {
-                                                    item.color.SwiftUiColor
-                                                        .frame(height:5)
-                                                        .frame(maxHeight:.infinity,alignment:.bottom)
-                                                }
+                } header: {
+                    Text("THEMES")
+                }
+                
+                //MARK: - font style
+                Section{
+                    ScrollView(.horizontal,showsIndicators:false){
+                        HStack(spacing:0){
+                            ForEach(fontstyles) { fs in
+                                Button {
+                                    fontStyleStr = fs.font
+                                } label: {
+                                    VStack(spacing: 8){
+                                        Text("Hell0你好")
+                                            .font(.custom(fs.fontName,size:18))
+                                            .foregroundColor(fontStyleStr == fs.font ? appHeartColor.SwiftUiColor : Color.primary)
+                                        Text(fs.name)
+                                            .foregroundColor(fontStyleStr == fs.font ? .primary:.gray)
+                                    }
+                                }.frame(width:120,height:80)
+                            }
+                        }.padding(10)
+                    }
+                } header: {
+                    Text("Font Style")
+                }
+                
+                //MARK: - change icon
+                Section{
+                    ScrollView(.horizontal){
+                        HStack{
+                            ForEach(icons){ icon in
+                                Button {
+                                    UIApplication.shared.setAlternateIconName(icon.iconName)
+                                } label: {
+                                    Image(icon.logoName)
+                                        .resizable()
+                                        .frame(width: 88, height: 88)
+                                        .cornerRadius(20)
+                                        .padding()
+                                }
+                            }
+                        }
+                    }
+                } header: {
+                    Text("APP ICON")
+                }
+                
+                
+            }
+            
+            Group{
+                //MARK: - change favcolor
+                Section{
+                    ScrollView(.horizontal,showsIndicators:false){
+                        HStack(spacing:0){
+                            ForEach(heartColors){ item in
+                                Button {
+                                    appHeartColor = item.color
+                                } label: {
+                                    Image(systemName: "heart.fill")
+                                        .font(.title)
+                                        .foregroundColor(item.color.SwiftUiColor)
+                                        .frame(width: 45, height: 45)
+                                        .cornerRadius(20)
+                                        .padding(.vertical)
+                                        .padding(.horizontal,15)
+                                        .overlay{
+                                            if item.color == appHeartColor {
+                                                item.color.SwiftUiColor
+                                                    .frame(height:5)
+                                                    .frame(maxHeight:.infinity,alignment:.bottom)
                                             }
-                                    }
+                                        }
                                 }
                             }
                         }
-                    } header: {
-                        Text("Favourite Color")
                     }
+                } header: {
+                    Text("Favourite Color")
                 }
-                    
-                Group{
-                    //MARK: - change LAYOUT
-                    Section{
-                        VStack(spacing:18){
-                            ForEach(1...6, id: \.self) { i in
-                                DiaryCardLayOutView(e_isFav:i == cardLayout ? true : false,layoutIndex:i)
-                                    .onTapGesture {
-                                        cardLayout = i
-                                    }
-                            }
+                //MARK: - change LAYOUT
+                Section{
+                    VStack(spacing:18){
+                        ForEach(1...6, id: \.self) { i in
+                            DiaryCardLayOutView(e_isFav:i == cardLayout ? true : false,layoutIndex:i,fontStyleString:fontStyleStr)
+                                .onTapGesture {
+                                    cardLayout = i
+                                }
                         }
-                    } header: {
-                        Text("LAYOUT")
                     }
-                    
-                    Section{
-                        //TODO: - change font
-                        
-                        
-                        //MARK: - change small title
-                        Toggle(isOn: $smallTitle) {
-                            AppearanceListCell(title: "Small Title", description: "Title style above every page")
-                        }
-                        .tint(appHeartColor.SwiftUiColor)
-                    } header: {
-                        Text("MORE")
-                    }
-                    VStack{}.frame(height:45)
+                } header: {
+                    Text("LAYOUT")
                 }
-            }//list
-            .listStyle(.plain)
-            .navigationTitle(navTitle)
-            .navigationBarTitleDisplayMode(.inline)
-        }//nav
-        .navigationViewStyle(StackNavigationViewStyle())
+                
+                Section{
+                    //MARK: - change small title
+                    Toggle(isOn: $smallTitle) {
+                        AppearanceListCell(title: "Small Title", description: "Title style above every page")
+                    }
+                    .tint(appHeartColor.SwiftUiColor)
+                } header: {
+                    Text("MORE")
+                }
+                VStack{}.frame(height:45)
+            }
+        }//list
+        .listStyle(.plain)
+        .navigationTitle(navTitle)
+        
+        //        }//nav
+        //        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -190,7 +214,7 @@ struct AppearanceView_Previews: PreviewProvider {
     static var previews: some View {
         AppearanceView()
             .environmentObject(DiaryViewMode())
-                    .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }
 

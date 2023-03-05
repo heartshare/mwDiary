@@ -13,6 +13,7 @@
 		C40E0E4B28E44AB100F33F21 /* arrow.json in Resources */ = {isa = PBXBuildFile; fileRef = C40E0E4A28E44AB100F33F21 /* arrow.json */; };
 		C40E0E4D28E44F6A00F33F21 /* listening-music.json in Resources */ = {isa = PBXBuildFile; fileRef = C40E0E4C28E44F6A00F33F21 /* listening-music.json */; };
 		C40E0E4F28E567DA00F33F21 /* DefaultDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E0E4E28E567DA00F33F21 /* DefaultDiaryView.swift */; };
+		C410B2BE29B46F2600CECD42 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410B2BD29B46F2600CECD42 /* FontStyle.swift */; };
 		C453B08128E284A50042B671 /* mwDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B08028E284A50042B671 /* mwDiaryApp.swift */; };
 		C453B08628E284A50042B671 /* mwDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C453B08428E284A50042B671 /* mwDiary.xcdatamodeld */; };
 		C453B08A28E284A80042B671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C453B08928E284A80042B671 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		C453B0EB28E285230042B671 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0D028E285230042B671 /* JournalView.swift */; };
 		C453B0EC28E285230042B671 /* FavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0D128E285230042B671 /* FavView.swift */; };
 		C453B0ED28E285230042B671 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0D228E285230042B671 /* SettingView.swift */; };
+		C469022229B885E50013B2B2 /* Ubuntu Mono derivative Powerline Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C469022129B885E50013B2B2 /* Ubuntu Mono derivative Powerline Bold.ttf */; };
 		C4D50A9728E29AE6003BE66B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4D50A9628E29AE6003BE66B /* README.md */; };
 		C4D8DDD028E344B900436B70 /* heart3.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D8DDCC28E344B800436B70 /* heart3.json */; };
 		C4D8DDD128E344B900436B70 /* heart4.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D8DDCD28E344B800436B70 /* heart4.json */; };
@@ -51,6 +53,8 @@
 		C4E54C1228E2E4C300C1B9CA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E54C1128E2E4C300C1B9CA /* Theme.swift */; };
 		C4E54C1428E317AD00C1B9CA /* MyLottieVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E54C1328E317AD00C1B9CA /* MyLottieVIew.swift */; };
 		C4E54C1928E3194A00C1B9CA /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E54C1828E3194A00C1B9CA /* testView.swift */; };
+		C4EC4AC229B84D210064A1E6 /* SmileySans-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4EC4AC129B84D210064A1E6 /* SmileySans-Oblique.ttf */; };
+		C4EC4AC429B84D610064A1E6 /* Ubuntu Mono derivative Powerline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4EC4AC329B84D610064A1E6 /* Ubuntu Mono derivative Powerline.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,7 @@
 		C40E0E4A28E44AB100F33F21 /* arrow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = arrow.json; sourceTree = "<group>"; };
 		C40E0E4C28E44F6A00F33F21 /* listening-music.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "listening-music.json"; sourceTree = "<group>"; };
 		C40E0E4E28E567DA00F33F21 /* DefaultDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDiaryView.swift; sourceTree = "<group>"; };
+		C410B2BD29B46F2600CECD42 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		C453B07D28E284A50042B671 /* mwDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mwDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C453B08028E284A50042B671 /* mwDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mwDiaryApp.swift; sourceTree = "<group>"; };
 		C453B08528E284A50042B671 /* mwDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mwDiary.xcdatamodel; sourceTree = "<group>"; };
@@ -91,6 +96,7 @@
 		C453B0D028E285230042B671 /* JournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		C453B0D128E285230042B671 /* FavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavView.swift; sourceTree = "<group>"; };
 		C453B0D228E285230042B671 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		C469022129B885E50013B2B2 /* Ubuntu Mono derivative Powerline Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu Mono derivative Powerline Bold.ttf"; sourceTree = "<group>"; };
 		C471F71428E3358E00E6D9D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C4D50A9628E29AE6003BE66B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4D8DDCC28E344B800436B70 /* heart3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart3.json; sourceTree = "<group>"; };
@@ -101,6 +107,8 @@
 		C4E54C1128E2E4C300C1B9CA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C4E54C1328E317AD00C1B9CA /* MyLottieVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLottieVIew.swift; sourceTree = "<group>"; };
 		C4E54C1828E3194A00C1B9CA /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
+		C4EC4AC129B84D210064A1E6 /* SmileySans-Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SmileySans-Oblique.ttf"; sourceTree = "<group>"; };
+		C4EC4AC329B84D610064A1E6 /* Ubuntu Mono derivative Powerline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu Mono derivative Powerline.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,16 @@
 				C453B0B728E285220042B671 /* MyTextFieldWithUIKit.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		C41032CF29B81B2D0076C27B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C4EC4AC329B84D610064A1E6 /* Ubuntu Mono derivative Powerline.ttf */,
+				C469022129B885E50013B2B2 /* Ubuntu Mono derivative Powerline Bold.ttf */,
+				C4EC4AC129B84D210064A1E6 /* SmileySans-Oblique.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		C453B07428E284A50042B671 = {
@@ -181,6 +199,7 @@
 		C453B0B028E285220042B671 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C41032CF29B81B2D0076C27B /* Fonts */,
 				C453B08C28E284A80042B671 /* Preview Content */,
 				C453B0B228E285220042B671 /* lottie */,
 				C453B0B128E285220042B671 /* mmDiaryStore.storekit */,
@@ -222,6 +241,7 @@
 				C4E54C1128E2E4C300C1B9CA /* Theme.swift */,
 				C40E0E4828E3FDE400F33F21 /* AppIcon.swift */,
 				C40E0E4628E3FDBD00F33F21 /* HeartColor.swift */,
+				C410B2BD29B46F2600CECD42 /* FontStyle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,9 +367,12 @@
 				C453B08E28E284A80042B671 /* Preview Assets.xcassets in Resources */,
 				C4D8DDD028E344B900436B70 /* heart3.json in Resources */,
 				C4D8DDD128E344B900436B70 /* heart4.json in Resources */,
+				C469022229B885E50013B2B2 /* Ubuntu Mono derivative Powerline Bold.ttf in Resources */,
 				C453B0D428E285230042B671 /* write.json in Resources */,
+				C4EC4AC229B84D210064A1E6 /* SmileySans-Oblique.ttf in Resources */,
 				C453B0D328E285230042B671 /* mmDiaryStore.storekit in Resources */,
 				C453B0D528E285230042B671 /* hi.json in Resources */,
+				C4EC4AC429B84D610064A1E6 /* Ubuntu Mono derivative Powerline.ttf in Resources */,
 				C453B08A28E284A80042B671 /* Assets.xcassets in Resources */,
 				C4D8DDD228E344B900436B70 /* heart2.json in Resources */,
 				C40E0E4D28E44F6A00F33F21 /* listening-music.json in Resources */,
@@ -386,6 +409,7 @@
 				C453B0D928E285230042B671 /* DiaryListView.swift in Sources */,
 				C453B0DD28E285230042B671 /* DiaryEditView.swift in Sources */,
 				C4E54C1228E2E4C300C1B9CA /* Theme.swift in Sources */,
+				C410B2BE29B46F2600CECD42 /* FontStyle.swift in Sources */,
 				C453B0E828E285230042B671 /* ContentView.swift in Sources */,
 				C453B0EB28E285230042B671 /* JournalView.swift in Sources */,
 				C400CE0A28EFD23D00FD00A5 /* MoodType.swift in Sources */,

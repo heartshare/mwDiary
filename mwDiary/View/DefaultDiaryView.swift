@@ -22,17 +22,18 @@ struct DefaultDiaryView: View {
     @AppStorage("defaultTitle") var defaultTitle = "My daily mood"
     @AppStorage("defaultBody") var defaultBody = ""
     @AppStorage("appTheme") var appTheme:ThemeType = .Automatic
+    @AppStorage("fontStyle") var fontStyleStr:FontType = .Default
     
     var body: some View{
         ZStack {
-            NavigationView {
+//            NavigationView {
                 VStack{
                     Group{
                         //MARK: - 输入框
                         Rectangle()
                             .frame(height: 60)
                             .foregroundColor(Color.clear)
-                        MyTextFieldWithUIKit(text: $editTitle, placeholder: "Input your default title", isFirstResponder: $beginEditTitle)
+                        MyTextFieldWithUIKit(text: $editTitle, placeholder: "Input your default title", titleUIFont: fontStyleStr.titleUIFont, isFirstResponder: $beginEditTitle)
                         
                             .frame(height: 56,alignment: .center)
                             .overlay( RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -96,11 +97,10 @@ struct DefaultDiaryView: View {
                 }
                 .padding(.horizontal)
                 .navigationBarTitleDisplayMode(.inline)
-            }//nav
-            .navigationViewStyle(StackNavigationViewStyle())
+//            }//nav
+//            .navigationViewStyle(StackNavigationViewStyle())
             if isShowSaveAlert {
                 ToastAlertView(icon: "",text: "Saved Default Diary").zIndex(1)
-                
                 
             }
             

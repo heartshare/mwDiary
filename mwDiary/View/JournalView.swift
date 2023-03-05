@@ -15,7 +15,8 @@ struct JournalView: View {
     @State var editText = ""
     @State var showEditView = false
     @State var showDeleteAlert:Bool = false
-    private var navTitle = "Journals"
+//    private var navTitle = "Journals"
+    private var navTitle = "Search"
     @State var isShowFavToastAlert = false
     @State var isShowDeleteToastAlert = false
     @State var selectEntity:DiaryEntity? = nil

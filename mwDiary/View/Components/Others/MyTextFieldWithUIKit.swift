@@ -45,6 +45,7 @@ struct MyTextFieldWithUIKit: UIViewRepresentable {
 
     @Binding var text: String
     var placeholder: String
+    var titleUIFont:UIFont
     @Binding var isFirstResponder: Bool
     var textAlignment: NSTextAlignment = .center
     var isSecure: Bool = false
@@ -58,7 +59,8 @@ struct MyTextFieldWithUIKit: UIViewRepresentable {
 
     func makeUIView(context: UIViewRepresentableContext<MyTextFieldWithUIKit>) -> UITextField {
         let textField = UITextField(frame: .zero)
-        textField.font = UIFont.preferredFont(forTextStyle: .headline)
+//        textField.font = UIFont.preferredFont(forTextStyle: .headline)
+        textField.font = titleUIFont
         textField.autocorrectionType = .no
         textField.delegate = context.coordinator
         textField.placeholder = NSLocalizedString(placeholder, comment: "")
@@ -90,7 +92,7 @@ struct MyTextFieldWithUIKit: UIViewRepresentable {
 
 struct TextFieldWithFocus_Previews: PreviewProvider {
     static var previews: some View {
-        MyTextFieldWithUIKit(text: .constant(""), placeholder: "placeholder", isFirstResponder: .constant(false))
+        MyTextFieldWithUIKit(text: .constant(""), placeholder: "placeholder", titleUIFont: UIFont.preferredFont(forTextStyle: .headline), isFirstResponder: .constant(false))
             .previewLayout(.sizeThatFits)
     }
 }
