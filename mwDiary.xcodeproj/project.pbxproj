@@ -13,6 +13,7 @@
 		C40E0E4B28E44AB100F33F21 /* arrow.json in Resources */ = {isa = PBXBuildFile; fileRef = C40E0E4A28E44AB100F33F21 /* arrow.json */; };
 		C40E0E4D28E44F6A00F33F21 /* listening-music.json in Resources */ = {isa = PBXBuildFile; fileRef = C40E0E4C28E44F6A00F33F21 /* listening-music.json */; };
 		C40E0E4F28E567DA00F33F21 /* DefaultDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E0E4E28E567DA00F33F21 /* DefaultDiaryView.swift */; };
+		C410B2BE29B46F2600CECD42 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410B2BD29B46F2600CECD42 /* FontStyle.swift */; };
 		C453B08128E284A50042B671 /* mwDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B08028E284A50042B671 /* mwDiaryApp.swift */; };
 		C453B08628E284A50042B671 /* mwDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C453B08428E284A50042B671 /* mwDiary.xcdatamodeld */; };
 		C453B08A28E284A80042B671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C453B08928E284A80042B671 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		C40E0E4A28E44AB100F33F21 /* arrow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = arrow.json; sourceTree = "<group>"; };
 		C40E0E4C28E44F6A00F33F21 /* listening-music.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "listening-music.json"; sourceTree = "<group>"; };
 		C40E0E4E28E567DA00F33F21 /* DefaultDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDiaryView.swift; sourceTree = "<group>"; };
+		C410B2BD29B46F2600CECD42 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		C453B07D28E284A50042B671 /* mwDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mwDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C453B08028E284A50042B671 /* mwDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mwDiaryApp.swift; sourceTree = "<group>"; };
 		C453B08528E284A50042B671 /* mwDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mwDiary.xcdatamodel; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				C4E54C1128E2E4C300C1B9CA /* Theme.swift */,
 				C40E0E4828E3FDE400F33F21 /* AppIcon.swift */,
 				C40E0E4628E3FDBD00F33F21 /* HeartColor.swift */,
+				C410B2BD29B46F2600CECD42 /* FontStyle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				C453B0D928E285230042B671 /* DiaryListView.swift in Sources */,
 				C453B0DD28E285230042B671 /* DiaryEditView.swift in Sources */,
 				C4E54C1228E2E4C300C1B9CA /* Theme.swift in Sources */,
+				C410B2BE29B46F2600CECD42 /* FontStyle.swift in Sources */,
 				C453B0E828E285230042B671 /* ContentView.swift in Sources */,
 				C453B0EB28E285230042B671 /* JournalView.swift in Sources */,
 				C400CE0A28EFD23D00FD00A5 /* MoodType.swift in Sources */,

@@ -23,6 +23,7 @@ struct AppearanceListCell: View {
 struct AppearanceView: View {
     
     @AppStorage("appTheme") var appTheme:ThemeType = .Automatic
+    @AppStorage("fontStyle") var fontStyleStr:String = "Default"
     @AppStorage("heartColor") var appHeartColor:HeartColorType = .yellow
     @AppStorage("smallTitle") var smallTitle:Bool = false
     @AppStorage("cardLayout") var cardLayout:Int = 2
@@ -45,6 +46,14 @@ struct AppearanceView: View {
         //        Theme(theme: .rainbow)
     ]
     
+    private let fontstyles:[String] = [
+        "Default",
+        "Serif",
+        "Mono"
+    ]
+    
+    
+    
     @State var isplay = false
     private let heartColors:[HeartColor] = [HeartColor(color: .primary),
                                             HeartColor(color: .yellow),
@@ -56,13 +65,9 @@ struct AppearanceView: View {
     
     
     
-    
-    
-    
     var body: some View {
         
         NavigationView {
-            
             List{
                 Group{
                     //MARK: - change ColorTheme
@@ -93,8 +98,31 @@ struct AppearanceView: View {
                         Text("THEMES")
                     }
                     
+                    //MARK: - font style
+                    Section{
+                        ScrollView(.horizontal,showsIndicators:false){
+                            HStack(spacing:0){
+                                ForEach(fontstyles, id: \.self) { fs in
+                                    Button {
+                                        fontStyleStr = fs
+                                    } label: {
+                                        VStack(spacing: 8){
+                                            Text("Ag你好")
+                                                .foregroundColor(fontStyleStr == fs ? appHeartColor.SwiftUiColor : Color.primary)
+                                            Text(fs)
+                                                .foregroundColor(fontStyleStr == fs ? .primary:.gray)
+                                        }
+                                    }.frame(width:80,height:80)
+                                }
+                            }.padding(10)
+                        }
+                    } header: {
+                        Text("Font Style")
+                    }
+                    
                     //MARK: - change icon
                     Section{
+                        
                         ScrollView(.horizontal){
                             HStack{
                                 ForEach(icons){ icon in
@@ -114,6 +142,10 @@ struct AppearanceView: View {
                         Text("APP ICON")
                     }
                     
+
+                }
+                    
+                Group{
                     //MARK: - change favcolor
                     Section{
                         ScrollView(.horizontal,showsIndicators:false){
@@ -143,9 +175,6 @@ struct AppearanceView: View {
                     } header: {
                         Text("Favourite Color")
                     }
-                }
-                    
-                Group{
                     //MARK: - change LAYOUT
                     Section{
                         VStack(spacing:18){
@@ -190,7 +219,7 @@ struct AppearanceView_Previews: PreviewProvider {
     static var previews: some View {
         AppearanceView()
             .environmentObject(DiaryViewMode())
-                    .preferredColorScheme(.dark)
+                    .preferredColorScheme(.light)
     }
 }
 

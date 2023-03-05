@@ -28,6 +28,7 @@ struct MyTabView: View {
     //notionTabItems
     var notionTabBar:some View{
         HStack(){
+            Spacer()
             ForEach(notionTabItems){item in
                 Button{
                     withAnimation (.easeInOut(duration: 0.21)){
@@ -41,13 +42,15 @@ struct MyTabView: View {
                         .foregroundColor(selectTab == item.tab ? appHeartColor.SwiftUiColor : .gray)
                         .opacity(selectTab == item.tab ? 1 : 0.5)
                         .symbolVariant(selectTab == item.tab ? .fill : .none)
-                        .padding(12)
                 }
+                Spacer()
             }
         }
-        .frame(maxWidth: .infinity)
+        .padding(EdgeInsets(top: 10, leading: 0, bottom: 20, trailing: 0))
+//        .frame(maxWidth: .infinity)
+//        .border(Color.primary)
         .background(.ultraThinMaterial)
-        .shadow(radius: 20)
+//        .shadow(radius: 20)
         .frame(maxHeight: .infinity,alignment: .bottom)
         .ignoresSafeArea(.all)
     }

@@ -278,8 +278,8 @@
             filePath = "mwDiary/Nav/MyTabView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "kakeTabBar"
             landmarkType = "24">
          </BreakpointContent>
@@ -294,8 +294,8 @@
             filePath = "mwDiary/Nav/MyTabView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "kakeTabBar"
             landmarkType = "24">
             <Locations>
@@ -342,8 +342,8 @@
             filePath = "mwDiary/Nav/MyTabView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "quantumultTabBar"
             landmarkType = "24">
          </BreakpointContent>
