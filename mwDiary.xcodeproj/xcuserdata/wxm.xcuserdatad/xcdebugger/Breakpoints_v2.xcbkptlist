@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "59D5E22D-F806-42B1-9369-B4440E453C87"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5BE13CE-7984-4C11-92A8-EBE100E64877"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mwDiary/View/Components/DiaryListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77D1E8C7-AB32-4018-B7C7-9118248BC12F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mwDiary/View/Components/DiaryListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "991E74B6-824C-49B4-AD09-32F17AB3E306"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mwDiary/View/Components/DiaryListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "DiaryListView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "991E74B6-824C-49B4-AD09-32F17AB3E306 - 881787907231006d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryListView.selectEntity.getter : Swift.Optional&lt;mwDiary.DiaryEntity&gt;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/Components/DiaryListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "991E74B6-824C-49B4-AD09-32F17AB3E306 - aa9f125edad51c79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryListView.selectEntity.setter : Swift.Optional&lt;mwDiary.DiaryEntity&gt;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/Components/DiaryListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "991E74B6-824C-49B4-AD09-32F17AB3E306 - df7c213a768d1168"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryListView.selectEntity.modify : Swift.Optional&lt;mwDiary.DiaryEntity&gt;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/Components/DiaryListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "991E74B6-824C-49B4-AD09-32F17AB3E306 - c84d3516e9691cfd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryListView.selectEntity.modify : Swift.Optional&lt;mwDiary.DiaryEntity&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/Components/DiaryListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "991E74B6-824C-49B4-AD09-32F17AB3E306 - bc1552e76d7aa8cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryListView.$selectEntity.getter : SwiftUI.Binding&lt;Swift.Optional&lt;mwDiary.DiaryEntity&gt;&gt;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/Components/DiaryListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "192D2E77-16C4-47C3-BAC8-81CDFE3ACCD3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mwDiary/View/DiaryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6430CFB-6FFE-4AA1-81BA-EB14BAFA4F29"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mwDiary/View/DiaryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "DiaryView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "D6430CFB-6FFE-4AA1-81BA-EB14BAFA4F29 - d5974a631740f5e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of mwDiary.DiaryView.selectEntity : Swift.Optional&lt;mwDiary.DiaryEntity&gt;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/DiaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "D6430CFB-6FFE-4AA1-81BA-EB14BAFA4F29 - 3681e6581fa76489"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryView.selectEntity.getter : Swift.Optional&lt;mwDiary.DiaryEntity&gt;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/DiaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "D6430CFB-6FFE-4AA1-81BA-EB14BAFA4F29 - 718d360fb12cc89d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryView.selectEntity.setter : Swift.Optional&lt;mwDiary.DiaryEntity&gt;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/DiaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "D6430CFB-6FFE-4AA1-81BA-EB14BAFA4F29 - 21fdb8188445db8c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryView.selectEntity.modify : Swift.Optional&lt;mwDiary.DiaryEntity&gt;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/DiaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D6430CFB-6FFE-4AA1-81BA-EB14BAFA4F29 - 7894a01122bddabb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryView.selectEntity.modify : Swift.Optional&lt;mwDiary.DiaryEntity&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/DiaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "D6430CFB-6FFE-4AA1-81BA-EB14BAFA4F29 - 9ec07acea0a49c45"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryView.$selectEntity.getter : SwiftUI.Binding&lt;Swift.Optional&lt;mwDiary.DiaryEntity&gt;&gt;"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/DiaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "D6430CFB-6FFE-4AA1-81BA-EB14BAFA4F29 - f642ff5053e95b04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.DiaryView.init() -&gt; mwDiary.DiaryView"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/View/DiaryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "976">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4BA6DEB-DE55-48E6-BCE3-980CF7D5020E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mwDiary/Nav/MyTabView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "kakeTabBar"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90841EB9-1D90-4259-B5B7-752F7CB98A89"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mwDiary/Nav/MyTabView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "kakeTabBar"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "90841EB9-1D90-4259-B5B7-752F7CB98A89 - 155643b0a000c5cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mwDiary.MyTabView.kakeTabBar.getter : some"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/Nav/MyTabView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "600">
+               </Location>
+               <Location
+                  uuid = "90841EB9-1D90-4259-B5B7-752F7CB98A89 - 5380cf2d91d25db9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI.ForEach&lt;Swift.Array&lt;mwDiary.TabItem&gt;, Foundation.UUID, SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;)&gt; in mwDiary.MyTabView.kakeTabBar.getter : some"
+                  moduleName = "mwDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wxm/Developer/mwDiary/mwDiary/Nav/MyTabView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "360">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFAF48EF-5457-47AE-9B83-233F16EE53BB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mwDiary/Nav/MyTabView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "quantumultTabBar"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
