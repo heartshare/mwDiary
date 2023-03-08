@@ -52,7 +52,6 @@ struct AppearanceView: View {
         FontStyle(font: .Mono)
     ]
     
-    
     @State var isplay = false
     private let heartColors:[HeartColor] = [HeartColor(color: .primary),
                                             HeartColor(color: .yellow),
@@ -72,6 +71,7 @@ struct AppearanceView: View {
                 Section {
                     VStack(alignment:.leading,spacing: 0){
                         ForEach(themes) { theme in
+
                             HStack{
                                 Label(theme.name, systemImage: theme.icon)
                                     .labelStyle(.titleAndIcon)
@@ -164,6 +164,7 @@ struct AppearanceView: View {
                                                 item.color.SwiftUiColor
                                                     .frame(height:5)
                                                     .frame(maxHeight:.infinity,alignment:.bottom)
+
                                             }
                                         }
                                 }
@@ -181,6 +182,7 @@ struct AppearanceView: View {
                                 .onTapGesture {
                                     cardLayout = i
                                 }
+
                         }
                     }
                 } header: {
@@ -215,6 +217,7 @@ struct AppearanceView_Previews: PreviewProvider {
         AppearanceView()
             .environmentObject(DiaryViewMode())
             .preferredColorScheme(.light)
+
     }
 }
 
