@@ -13,3 +13,13 @@ struct BlankButtonStyle:ButtonStyle {
         configuration.label
     }
 }
+
+
+struct NormalButtonStyle:ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .background(configuration.isPressed ? Color.gray.opacity(0.5) : Color.gray)
+            .scaleEffect(configuration.isPressed ? 0.99 : 1.0)
+    }
+}
+

@@ -39,7 +39,6 @@ struct SettingView: View {
             Link(destination: URL(string: "mailto:wxmvv@outlook.com")!, label: {Text("Contact").foregroundColor(.blue)}
             )
         }.padding(18)
-        
             .frame(width: 300)
             .background {
                 Color(.gray).opacity(0.1)
@@ -58,8 +57,6 @@ struct SettingView: View {
                     }
                 }
                 .listRowSeparator(.hidden)
-                
-                
                 Spacer()
                 NavigationLink {
                     AppearanceView()

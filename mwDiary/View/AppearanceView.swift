@@ -71,7 +71,6 @@ struct AppearanceView: View {
                 Section {
                     VStack(alignment:.leading,spacing: 0){
                         ForEach(themes) { theme in
-
                             HStack{
                                 Label(theme.name, systemImage: theme.icon)
                                     .labelStyle(.titleAndIcon)
