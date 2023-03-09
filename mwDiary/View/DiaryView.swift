@@ -15,7 +15,7 @@ struct DiaryView: View {
     @State var editText = ""
     @State var showEditView = false
     @State var showDeleteAlert:Bool = false
-    private var navTitle = dateFormatterMMMM.string(from: Date())
+    private var navTitle = dateFormatterMMMM.string(from:Date())
     @State var isShowFavToastAlert = false
     @State var isShowDeleteToastAlert = false
     @State var selectEntity:DiaryEntity? = nil

@@ -15,7 +15,6 @@ struct FavView: View {
     @State var editText = ""
     @State var showEditView = false
     @State var showDeleteAlert:Bool = false
-    private var navTitle = "Favourates"
     @State var isShowFavToastAlert = false
     @State var isShowDeleteToastAlert = false
     @State var selectEntity:DiaryEntity? = nil
@@ -58,7 +57,7 @@ struct FavView: View {
                 //TODO: - 搜索后保留结果 取消focus
                 //                .onSubmit(of: .search) { print("hello") }
                 //MARK: - listStyle NavTitle
-                    .navigationTitle(navTitle)
+                    .navigationTitle("Favourates")
             }//Nav
             .navigationViewStyle(StackNavigationViewStyle())
             

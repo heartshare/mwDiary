@@ -18,6 +18,7 @@ import Foundation
 var dateFormatterHHmm:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "HH:mm"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
 
@@ -25,66 +26,75 @@ var dateFormatterHHmm:DateFormatter {
 var dateFormatterMMMddHHmm:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "MMM dd HH:mm"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
 
 var dateFormatterMMdd:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "M-dd"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
 
 var dateFormatterMMMM:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "MMMM"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
 
 var dateFormatteryyyyMM:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyyMM"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
 
 var dateFormatterMM:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "MM"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
 
 var dateFormatterdd:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "dd"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
 var dateFormatteryyyy:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
 
 var dateFormatteryyyyMMMM:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyyMMMM"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
 
 var dateFormatterHHmmss:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "HH:mm:ss"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
 var dateFormatteryyyyMMdd:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy-MM-dd"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }
-
-
 
 
 var exportDateFormatteryyyyMMddHHmmss:DateFormatter {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyyMMdd HHmmss"
+    formatter.locale = Locale(identifier: Locale.current.identifier)
     return formatter
 }

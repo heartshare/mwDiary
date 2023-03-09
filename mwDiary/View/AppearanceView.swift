@@ -9,16 +9,7 @@ import SwiftUI
 
 
 
-struct AppearanceListCell: View {
-    var title:String = "title"
-    var description:String = "Description"
-    var body: some View {
-        VStack(alignment:.leading){
-            Text("smallTitle").font(.headline)
-            Text("Title style above every page").font(.footnote).foregroundColor(.gray)
-        }
-    }
-}
+
 
 struct AppearanceView: View {
     
@@ -29,7 +20,7 @@ struct AppearanceView: View {
     @AppStorage("cardLayout") var cardLayout:Int = 1
     @EnvironmentObject var diaryvm:DiaryViewMode
     
-    private var navTitle = "Appearance"
+
     
     private let icons:[AppIcon] = [
         AppIcon(iconName: nil, logoName: "icon 1"),
@@ -60,7 +51,7 @@ struct AppearanceView: View {
                                             HeartColor(color: .cyan)
     ]
     
-    
+
     
     
     var body: some View {
@@ -177,7 +168,7 @@ struct AppearanceView: View {
                 Section{
                     VStack(spacing:18){
                         ForEach(1...6, id: \.self) { i in
-                            DiaryCardLayOutView(e_isFav:i == cardLayout ? true : false,layoutIndex:i,fontStyleString:fontStyleStr)
+                            DiaryCardLayOutView(e_isFav:i == cardLayout ? true : false,layoutIndex:i,fontStyleString:fontStyleStr,settingView:true)
                                 .onTapGesture {
                                     cardLayout = i
                                 }
@@ -191,20 +182,31 @@ struct AppearanceView: View {
                 Section{
                     //MARK: - change small title
                     Toggle(isOn: $smallTitle) {
-                        AppearanceListCell(title: "Small Title", description: "Title style above every page")
+                        AppearanceListCell()
                     }
                     .tint(appHeartColor.SwiftUiColor)
                 } header: {
                     Text("MORE")
                 }
-                VStack{}.frame(height:45)
+                Spacer()
+                Spacer()
+//                VStack{}.frame(height:45)
             }
         }//list
         .listStyle(.plain)
-        .navigationTitle(navTitle)
+        .navigationTitle("Appearance")
         
         //        }//nav
         //        .navigationViewStyle(StackNavigationViewStyle())
+    }
+}
+
+struct AppearanceListCell: View {
+    var body: some View {
+        VStack(alignment:.leading){
+            Text("Small Title").font(.headline)
+            Text("Title style above every page").font(.footnote).foregroundColor(.gray)
+        }
     }
 }
 

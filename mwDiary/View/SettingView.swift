@@ -21,9 +21,6 @@ struct SettingView: View {
     @State var editTitle:String = ""
     @State var editText:String = ""
     
-    
-    private var naviTitle = "Setting"
-    
     var body: some View {
         //                kakeSettingView
         minimalSettingView
@@ -38,19 +35,21 @@ struct SettingView: View {
                 .lineLimit(2)
             Link(destination: URL(string: "mailto:wxmvv@outlook.com")!, label: {Text("Contact").foregroundColor(.blue)}
             )
-        }.padding(18)
-            .frame(width: 300)
-            .background {
-                Color(.gray).opacity(0.1)
-            }
-            .cornerRadius(10)
+        }
+        .padding(18)
+        .frame(width: 300)
+//        .background(.ultraThinMaterial)
+        .background(content: {
+            appHeartColor.SwiftUiColor.opacity(0.1)
+        })
+        .cornerRadius(10)
         
     }
     var minimalSettingView:some View{
         NavigationView {
             List{
-//                Spacer()
-//                    .listRowSeparator(.hidden)
+                //                Spacer()
+                //                    .listRowSeparator(.hidden)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack{
                         minimalHelloCard
@@ -63,10 +62,10 @@ struct SettingView: View {
                 } label: {
                     Text("Appearance")//外观风格
                 }
-                .listRowSeparator(.hidden)
-                .listRowBackground(
-                    Color(.gray).opacity(0.1)
-                )
+//                .listRowSeparator(.hidden)
+//                .listRowBackground(
+//                    Color(.gray).opacity(0.1)
+//                )
                 
                 Spacer()
                 Button {
@@ -74,10 +73,10 @@ struct SettingView: View {
                 } label: {
                     Text("Export Data")
                 }
-                .listRowBackground(
-                    Color(.gray).opacity(0.1)
-                )
-                .listRowSeparator(.hidden)
+//                .listRowBackground(
+//                    Color(.gray).opacity(0.1)
+//                )
+//                .listRowSeparator(.hidden)
                 NavigationLink {
                     DefaultDiaryView(editTitle: $editTitle, editText: $editText)
                 } label: {
@@ -90,20 +89,21 @@ struct SettingView: View {
                         editText = defaultBody
                     }
                 }
-                .listRowBackground(
-                    Color(.gray).opacity(0.1)
-                )
-                .listRowSeparator(.hidden)
+//                .listRowBackground(
+//                    Color(.gray).opacity(0.1)
+//                )
+//                .listRowSeparator(.hidden)
                 Spacer()
                 Link(destination: URL(string: "mailto:wxmvv@outlook.com")!, label: {Text("Contact")})
-                    .listRowBackground(
-                        Color(.gray).opacity(0.1)
-                    )
-                    .listRowSeparator(.hidden)
+//                    .listRowBackground(
+//                        Color(.gray).opacity(0.1)
+//                    )
+//                    .listRowSeparator(.hidden)
                 
             }
-            .listStyle(.plain)
-            .navigationTitle(naviTitle)
+            //            .listStyle(.plain)
+            .listStyle(.inset)
+            .navigationTitle("Setting")
             .navigationBarTitleDisplayMode(smallTitle ? .inline:.large)
             
         }
@@ -197,7 +197,7 @@ struct SettingView: View {
             .tint(Color(.label))
             .labelStyle(.titleAndIcon)
             .listStyle(.plain)
-            .navigationTitle(naviTitle)
+            .navigationTitle("Setting")
             .navigationBarTitleDisplayMode(.inline)
             
         }//nav

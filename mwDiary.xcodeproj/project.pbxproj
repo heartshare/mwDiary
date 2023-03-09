@@ -44,6 +44,7 @@
 		C453B0EC28E285230042B671 /* FavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0D128E285230042B671 /* FavView.swift */; };
 		C453B0ED28E285230042B671 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0D228E285230042B671 /* SettingView.swift */; };
 		C469022229B885E50013B2B2 /* Ubuntu Mono derivative Powerline Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C469022129B885E50013B2B2 /* Ubuntu Mono derivative Powerline Bold.ttf */; };
+		C469022529B8DDCB0013B2B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C469022729B8DDCB0013B2B2 /* Localizable.strings */; };
 		C4D50A9728E29AE6003BE66B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4D50A9628E29AE6003BE66B /* README.md */; };
 		C4D8DDD028E344B900436B70 /* heart3.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D8DDCC28E344B800436B70 /* heart3.json */; };
 		C4D8DDD128E344B900436B70 /* heart4.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D8DDCD28E344B800436B70 /* heart4.json */; };
@@ -97,6 +98,8 @@
 		C453B0D128E285230042B671 /* FavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavView.swift; sourceTree = "<group>"; };
 		C453B0D228E285230042B671 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		C469022129B885E50013B2B2 /* Ubuntu Mono derivative Powerline Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu Mono derivative Powerline Bold.ttf"; sourceTree = "<group>"; };
+		C469022629B8DDCB0013B2B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C469022829B8DDD30013B2B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C471F71428E3358E00E6D9D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C4D50A9628E29AE6003BE66B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4D8DDCC28E344B800436B70 /* heart3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart3.json; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 				C453B0C828E285230042B671 /* ViewModel */,
 				C453B0C228E285230042B671 /* Extension */,
 				C453B0B028E285220042B671 /* Resources */,
+				C469022729B8DDCB0013B2B2 /* Localizable.strings */,
 			);
 			path = mwDiary;
 			sourceTree = "<group>";
@@ -343,6 +347,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = C453B07428E284A50042B671;
 			packageReferences = (
@@ -374,6 +379,7 @@
 				C453B0D528E285230042B671 /* hi.json in Resources */,
 				C4EC4AC429B84D610064A1E6 /* Ubuntu Mono derivative Powerline.ttf in Resources */,
 				C453B08A28E284A80042B671 /* Assets.xcassets in Resources */,
+				C469022529B8DDCB0013B2B2 /* Localizable.strings in Resources */,
 				C4D8DDD228E344B900436B70 /* heart2.json in Resources */,
 				C40E0E4D28E44F6A00F33F21 /* listening-music.json in Resources */,
 			);
@@ -423,6 +429,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C469022729B8DDCB0013B2B2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C469022629B8DDCB0013B2B2 /* en */,
+				C469022829B8DDD30013B2B2 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C453B0A528E284A90042B671 /* Debug */ = {

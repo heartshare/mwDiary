@@ -16,12 +16,13 @@ struct DiaryCardLayOutView: View {
     
     var e_create_date:Date = Date()
     var e_modified_date:Date = Date()
-    var e_title:String = "i am title "
+    var e_title:String = "I am title!"
     var e_body:String = "This is a preview window, tap to change the list layout ."
     var e_isFav:Bool = true
     var layoutIndex:Int = 1
     var fontStyleString:FontType = .Default
     var isFirstDiaryOfDay:Bool = true
+    var settingView:Bool = false
     
     var body: some View {
         switch layoutIndex {
@@ -79,19 +80,29 @@ struct DiaryCardLayOutView: View {
         .frame(width: 48)
         .cornerRadius(12)
     }
+    //    let title_key: LocalizedStringKey = "I am title!"
+    //    let title_e = "I am title!"
+    //    let body_e = "This is a preview window, tap to change the list layout .This is a preview window, tap to change the list layout ."
     var textView1 : some View {
         HStack(spacing:4){
             VStack(alignment:.leading, spacing:8){
-                Text(e_title )
-                //                    .font(.subheadline)
-                //                    .fontWeight(.semibold)
-                    .font(fontStyleString.titleFont)
-                    .lineLimit(1)
-                Text(e_body )
-                    .font(fontStyleString.bodyFont)
-                //                    .font(.footnote)
-                    .lineLimit(1)
-                    .padding(.bottom,3)
+                if settingView {
+                    Text("I am title!")
+                        .font(fontStyleString.titleFont)
+                        .lineLimit(1)
+                    Text("This is a preview window, tap to change the list layout .This is a preview window, tap to change the list layout .")
+                        .font(fontStyleString.bodyFont)
+                        .lineLimit(1)
+                        .padding(.bottom,3)
+                }else{
+                    Text(e_title )
+                        .font(fontStyleString.titleFont)//.font(.subheadline).fontWeight(.semibold)
+                        .lineLimit(1)
+                    Text(e_body )
+                        .font(fontStyleString.bodyFont) //.font(.footnote)
+                        .lineLimit(1)
+                        .padding(.bottom,3)
+                }
             }.frame(maxWidth: .infinity,alignment: .leading)
             
             VStack(alignment:.trailing, spacing:8){
@@ -160,16 +171,23 @@ struct DiaryCardLayOutView: View {
     var textView2 : some View {
         HStack(spacing:4){
             VStack(alignment:.leading, spacing:8){
-                Text(e_title )
-                    .font(fontStyleString.titleFont)
-                //                    .font(.subheadline)
-                //                    .fontWeight(.semibold)
-                    .lineLimit(1)
-                Text(e_body )
-                    .font(fontStyleString.bodyFont)
-                //                    .font(.footnote)
-                    .lineLimit(1)
-                    .padding(.bottom,3)
+                if settingView {
+                    Text("I am title!")
+                        .font(fontStyleString.titleFont)
+                        .lineLimit(1)
+                    Text("This is a preview window, tap to change the list layout .This is a preview window, tap to change the list layout .")
+                        .font(fontStyleString.bodyFont)
+                        .lineLimit(1)
+                        .padding(.bottom,3)
+                }else{
+                    Text(e_title )
+                        .font(fontStyleString.titleFont)//.font(.subheadline).fontWeight(.semibold)
+                        .lineLimit(1)
+                    Text(e_body )
+                        .font(fontStyleString.bodyFont) //.font(.footnote)
+                        .lineLimit(1)
+                        .padding(.bottom,3)
+                }
             }.frame(maxWidth: .infinity,alignment: .leading)
             
             VStack(alignment:.trailing, spacing:8){
@@ -241,16 +259,23 @@ struct DiaryCardLayOutView: View {
     var textView3 : some View {
         HStack(spacing:4){
             VStack(alignment:.leading, spacing:8){
-                Text(e_title)
-                    .font(fontStyleString.titleFont)
-                //                    .font(.subheadline)
-                //                    .fontWeight(.semibold)
-                    .lineLimit(1)
-                Text(e_body )
-                    .font(fontStyleString.bodyFont)
-                //                    .font(.footnote)
-                    .lineLimit(1)
-                    .padding(.bottom,3)
+                if settingView {
+                    Text("I am title!")
+                        .font(fontStyleString.titleFont)
+                        .lineLimit(1)
+                    Text("This is a preview window, tap to change the list layout .This is a preview window, tap to change the list layout .")
+                        .font(fontStyleString.bodyFont)
+                        .lineLimit(1)
+                        .padding(.bottom,3)
+                }else{
+                    Text(e_title )
+                        .font(fontStyleString.titleFont)//.font(.subheadline).fontWeight(.semibold)
+                        .lineLimit(1)
+                    Text(e_body )
+                        .font(fontStyleString.bodyFont) //.font(.footnote)
+                        .lineLimit(1)
+                        .padding(.bottom,3)
+                }
             }.frame(maxWidth: .infinity,alignment: .leading)
             
             VStack(alignment:.trailing, spacing:8){
@@ -289,20 +314,27 @@ struct DiaryCardLayOutView: View {
     
     var textView4 : some View {
         HStack(spacing:4){
-            VStack(alignment:.leading, spacing:8){
-                Text(e_title )
-                    .font(fontStyleString.titleFont)
-                //                    .font(.subheadline)
-                //                    .fontWeight(.semibold)
-                    .lineLimit(1)
-                Text(e_body )
-                    .font(fontStyleString.bodyFont)
-                //                    .font(.footnote)
-                    .lineLimit(2)
-                    .padding(.bottom,3)
+            VStack(alignment:.leading, spacing:6){
+                if settingView {
+                    Text("I am title!")
+                        .font(fontStyleString.titleFont)
+                        .lineLimit(1)
+                    Text("This is a preview window, tap to change the list layout .This is a preview window, tap to change the list layout .")
+                        .font(fontStyleString.bodyFont)
+                        .lineLimit(2)
+                        .padding(.bottom,3)
+                }else{
+                    Text(e_title )
+                        .font(fontStyleString.titleFont)//.font(.subheadline).fontWeight(.semibold)
+                        .lineLimit(1)
+                    Text(e_body )
+                        .font(fontStyleString.bodyFont) //.font(.footnote)
+                        .lineLimit(2)
+                        .padding(.bottom,3)
+                }
             }.frame(maxWidth: .infinity,alignment: .leading)
             
-            VStack(alignment:.trailing, spacing:8){
+            VStack(alignment:.trailing, spacing:6){
                 Image(systemName: "heart.fill")
                     .font(.headline)
                     .frame(maxWidth: .infinity,alignment: .center)
@@ -334,20 +366,27 @@ struct DiaryCardLayOutView: View {
     
     var textView5 : some View {
         HStack(spacing:4){
-            VStack(alignment:.leading, spacing:8){
-                Text(e_title )
-                    .font(fontStyleString.titleFont)
-                //                    .font(.subheadline)
-                //                    .fontWeight(.semibold)
-                    .lineLimit(1)
-                Text(e_body )
-                    .font(fontStyleString.bodyFont)
-                //                    .font(.footnote)
-                    .lineLimit(2)
-                    .padding(.bottom,3)
+            VStack(alignment:.leading, spacing:6){
+                if settingView {
+                    Text("I am title!")
+                        .font(fontStyleString.titleFont)
+                        .lineLimit(1)
+                    Text("This is a preview window, tap to change the list layout .This is a preview window, tap to change the list layout .")
+                        .font(fontStyleString.bodyFont)
+                        .lineLimit(2)
+                        .padding(.bottom,3)
+                }else{
+                    Text(e_title )
+                        .font(fontStyleString.titleFont)//.font(.subheadline).fontWeight(.semibold)
+                        .lineLimit(1)
+                    Text(e_body )
+                        .font(fontStyleString.bodyFont) //.font(.footnote)
+                        .lineLimit(2)
+                        .padding(.bottom,3)
+                }
             }.frame(maxWidth: .infinity,alignment: .leading)
             
-            VStack(alignment:.trailing, spacing:8){
+            VStack(alignment:.trailing, spacing:6){
                 Image(systemName: "heart.fill")
                     .font(.headline)
                     .frame(maxWidth: .infinity,alignment: .center)
@@ -383,24 +422,41 @@ struct DiaryCardLayOutView: View {
     var textView6 : some View {
         HStack(spacing:4){
             VStack(alignment:.leading, spacing:5){
-                HStack {
-                    Text("\(dateFormatterMMdd.string(from: e_create_date)) \(e_create_date.getDayInWeek()) / \(e_title)")
-                        .font(fontStyleString.titleFont)
-                    //                        .font(.subheadline)
-                    //                        .fontWeight(.semibold)
-                        .frame(maxWidth: .infinity,alignment: .leading)
-                        .lineLimit(1)
-                    Image(systemName: "heart.fill")
-                        .font(.headline)
-                        .frame(width: 50,alignment: .center)
-                    //                        .frame(maxWidth: .infinity,alignment: .trailing)
-                        .foregroundColor(e_isFav ? appHeartColor.SwiftUiColor: .clear)
+                if settingView {
+                    HStack(spacing:0) {
+                        Text("3-09 Thu / ")
+                            .font(fontStyleString.titleFont)
+                            .frame(alignment: .leading)
+                            .lineLimit(1)
+                        Text("I am title!")
+                            .font(fontStyleString.titleFont)
+                            .frame(maxWidth: .infinity,alignment: .leading)
+                            .lineLimit(1)
+                        Image(systemName: "heart.fill")
+                            .font(.headline)
+                            .frame(width: 50,alignment: .center)
+                            .foregroundColor(e_isFav ? appHeartColor.SwiftUiColor: .clear)
+                    }
+                    Text("This is a preview window, tap to change the list layout .This is a preview window, tap to change the list layout .")
+                        .font(fontStyleString.bodyFont)
+                        .lineLimit(4)
+                        .padding(.bottom,3)
+                }else{
+                    HStack {
+                        Text("\(dateFormatterMMdd.string(from: e_create_date)) \(e_create_date.getDayInWeek()) / \(e_title)")
+                            .font(fontStyleString.titleFont)
+                            .frame(maxWidth: .infinity,alignment: .leading)
+                            .lineLimit(1)
+                        Image(systemName: "heart.fill")
+                            .font(.headline)
+                            .frame(width: 50,alignment: .center)
+                            .foregroundColor(e_isFav ? appHeartColor.SwiftUiColor: .clear)
+                    }
+                    Text(e_body )
+                        .font(fontStyleString.bodyFont)
+                        .lineLimit(4)
+                        .padding(.bottom,3)
                 }
-                Text(e_body )
-                    .font(fontStyleString.bodyFont)
-                //                    .font(.footnote)
-                    .lineLimit(4)
-                    .padding(.bottom,3)
             }
             //            .background(appTheme.sysBack)
             .frame(maxWidth: .infinity,alignment: .leading)

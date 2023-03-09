@@ -16,7 +16,6 @@ struct JournalView: View {
     @State var showEditView = false
     @State var showDeleteAlert:Bool = false
 //    private var navTitle = "Journals"
-    private var navTitle = "Search"
     @State var isShowFavToastAlert = false
     @State var isShowDeleteToastAlert = false
     @State var selectEntity:DiaryEntity? = nil
@@ -61,7 +60,7 @@ struct JournalView: View {
                     }
                 }
                 .searchable(text:$searchStr,prompt: "")
-                .navigationTitle(navTitle)
+                .navigationTitle("Search")
             }
             .navigationViewStyle(StackNavigationViewStyle())
             
