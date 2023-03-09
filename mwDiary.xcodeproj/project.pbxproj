@@ -46,6 +46,7 @@
 		C469022229B885E50013B2B2 /* Ubuntu Mono derivative Powerline Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C469022129B885E50013B2B2 /* Ubuntu Mono derivative Powerline Bold.ttf */; };
 		C469022529B8DDCB0013B2B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C469022729B8DDCB0013B2B2 /* Localizable.strings */; };
 		C4B945BC29B99BEF000C3F69 /* docs in Resources */ = {isa = PBXBuildFile; fileRef = C4B945BB29B99BEF000C3F69 /* docs */; };
+		C4C48BA729BA33B800D313DC /* mwDiary.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C48BA629BA33B800D313DC /* mwDiary.png */; };
 		C4D50A9728E29AE6003BE66B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4D50A9628E29AE6003BE66B /* README.md */; };
 		C4D8DDD028E344B900436B70 /* heart3.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D8DDCC28E344B800436B70 /* heart3.json */; };
 		C4D8DDD128E344B900436B70 /* heart4.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D8DDCD28E344B800436B70 /* heart4.json */; };
@@ -103,6 +104,7 @@
 		C469022829B8DDD30013B2B2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C471F71428E3358E00E6D9D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C4B945BB29B99BEF000C3F69 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = "<group>"; };
+		C4C48BA629BA33B800D313DC /* mwDiary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mwDiary.png; sourceTree = "<group>"; };
 		C4D50A9628E29AE6003BE66B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4D8DDCC28E344B800436B70 /* heart3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart3.json; sourceTree = "<group>"; };
 		C4D8DDCD28E344B800436B70 /* heart4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart4.json; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				C4D50A9628E29AE6003BE66B /* README.md */,
+				C4C48BA629BA33B800D313DC /* mwDiary.png */,
 				C4B945BB29B99BEF000C3F69 /* docs */,
 				C453B07F28E284A50042B671 /* mwDiary */,
 				C453B07E28E284A50042B671 /* Products */,
@@ -384,6 +387,7 @@
 				C4EC4AC429B84D610064A1E6 /* Ubuntu Mono derivative Powerline.ttf in Resources */,
 				C453B08A28E284A80042B671 /* Assets.xcassets in Resources */,
 				C469022529B8DDCB0013B2B2 /* Localizable.strings in Resources */,
+				C4C48BA729BA33B800D313DC /* mwDiary.png in Resources */,
 				C4D8DDD228E344B900436B70 /* heart2.json in Resources */,
 				C40E0E4D28E44F6A00F33F21 /* listening-music.json in Resources */,
 			);
