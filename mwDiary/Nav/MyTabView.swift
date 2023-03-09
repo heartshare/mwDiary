@@ -46,7 +46,7 @@ struct MyTabView: View {
                 Spacer()
             }
         }
-        .padding(EdgeInsets(top: 10, leading: 0, bottom: 20, trailing: 0))
+        .padding(EdgeInsets(top: 8, leading: 0, bottom: 24, trailing: 0))
 //        .frame(maxWidth: .infinity)
 //        .border(Color.primary)
         .background(Color("whiteblack"))

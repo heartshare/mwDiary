@@ -37,9 +37,9 @@ struct Theme : Identifiable{
             return "rainbow"
         }
     }
-
+    
     var theme:ThemeType
-        
+    
 }
 
 
@@ -154,7 +154,7 @@ enum ThemeType:String{
             }
         }
     }
-
+    
     
 }
 

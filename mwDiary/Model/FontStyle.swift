@@ -83,7 +83,7 @@ enum FontType:String {
                 return UIFont(name: "SmileySans-Oblique", size: 20) ?? UIFont.preferredFont(forTextStyle: .headline)
             case .Mono:
                 return UIFont(name: "Ubuntu Mono derivative Powerline Bold", size: 20) ?? UIFont.preferredFont(forTextStyle: .headline)
-
+                
             }
         }
     }

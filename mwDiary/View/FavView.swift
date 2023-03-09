@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavView: View {
-
+    
     @AppStorage("heartColor") var appHeartColor:HeartColorType = .yellow
     @EnvironmentObject var diaryvm:DiaryViewMode
     @State var editTitle = ""
@@ -38,26 +38,26 @@ struct FavView: View {
         ZStack{
             NavigationView {
                 VStack{
-                DiaryListView(editTitle: $editTitle,
-                              editText: $editText,
-                              showEditView: $showEditView,
-                              showDeleteAlert: $showDeleteAlert,
-                              selectEntity: $selectEntity,
-                              isShowFavToastAlert: $isShowFavToastAlert,
-                              isShowDeleteToastAlert: $isShowDeleteToastAlert,
-                              filteredDiary: filteredDiary)
-                .onPreferenceChange(IsSearchingPreferenceKey.self) { value in
-                    withAnimation (.easeInOut){
-                        self.isSearchingValue = value
+                    DiaryListView(editTitle: $editTitle,
+                                  editText: $editText,
+                                  showEditView: $showEditView,
+                                  showDeleteAlert: $showDeleteAlert,
+                                  selectEntity: $selectEntity,
+                                  isShowFavToastAlert: $isShowFavToastAlert,
+                                  isShowDeleteToastAlert: $isShowDeleteToastAlert,
+                                  filteredDiary: filteredDiary)
+                    .onPreferenceChange(IsSearchingPreferenceKey.self) { value in
+                        withAnimation (.easeInOut){
+                            self.isSearchingValue = value
+                        }
                     }
                 }
-            }
                 //MARK: -搜索
-                    .searchable(text: $searchStr,prompt: "")
+                .searchable(text: $searchStr,prompt: "")
                 //TODO: - 搜索后保留结果 取消focus
                 //                .onSubmit(of: .search) { print("hello") }
                 //MARK: - listStyle NavTitle
-                    .navigationTitle("Favourates")
+                .navigationTitle("Favourates")
             }//Nav
             .navigationViewStyle(StackNavigationViewStyle())
             
@@ -82,11 +82,11 @@ struct FavView: View {
                 .tint(appHeartColor.SwiftUiColor)
             }
             //MARK: - Lottie
-//            if isShowAnime {
-//                MyLottieVIew(animationName: "heart5", isPlaying: $isShowAnime)
-//                    .frame(width: 80,height: 80)
-//                    .offset(x:-5)
-//            }
+            //            if isShowAnime {
+            //                MyLottieVIew(animationName: "heart5", isPlaying: $isShowAnime)
+            //                    .frame(width: 80,height: 80)
+            //                    .offset(x:-5)
+            //            }
             
             //MARK: - 弹窗
             if isShowFavToastAlert {
@@ -98,7 +98,7 @@ struct FavView: View {
             }
             
             if isShowDeleteToastAlert {
-                    ToastAlertView(icon: "",text: "Diary deleted").zIndex(1)
+                ToastAlertView(icon: "",text: "Diary deleted").zIndex(1)
             }
         }
     }

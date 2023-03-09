@@ -15,7 +15,7 @@ struct JournalView: View {
     @State var editText = ""
     @State var showEditView = false
     @State var showDeleteAlert:Bool = false
-//    private var navTitle = "Journals"
+    //    private var navTitle = "Journals"
     @State var isShowFavToastAlert = false
     @State var isShowDeleteToastAlert = false
     @State var selectEntity:DiaryEntity? = nil
@@ -38,7 +38,7 @@ struct JournalView: View {
     //MARK: - DatePicker
     @State var isShowDatePicker = false
     
-
+    
     var body: some View {
         ZStack {
             
@@ -73,7 +73,7 @@ struct JournalView: View {
                 } label: {
                     VStack{
                         Image(systemName: "calendar").font(.title)
-//                        Text(dateFormatteryyyyMM.string(from: searchDate))
+                        //                        Text(dateFormatteryyyyMM.string(from: searchDate))
                     }
                 }
                 .frame(width: 50, height: 50)
@@ -91,13 +91,13 @@ struct JournalView: View {
                 }
             }
             if isShowDeleteToastAlert {
-                    ToastAlertView(icon: "",text: "Diary deleted").zIndex(1)
+                ToastAlertView(icon: "",text: "Diary deleted").zIndex(1)
             }
             //MARK: - 弹窗datepicker
             if isShowDatePicker {
                 MyDatePicker(selectDate: $searchDate,isShowDatePicker: $isShowDatePicker, searchStr: $searchStr)
                     .zIndex(1)
-              
+                
             }
         }
     }

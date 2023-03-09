@@ -41,17 +41,17 @@ struct DiaryListView: View {
             ForEach(filteredDiary) { entity in
                 
                 DiaryCardView(diary: entity,isFirstDiaryOfDay: true)
-                    //MARK: - 设置卡片边距
+                //MARK: - 设置卡片边距
                     .padding(.vertical,10)
                     .padding(.horizontal,18)
-                    //MARK: - 点击编辑
+                //MARK: - 点击编辑
                     .onTapGesture {
                         showEditView = true
                         selectEntity = entity
                         editTitle = entity.title ?? ""
                         editText = entity.body ?? ""
                     }
-                    //MARK: - 滑动菜单
+                //MARK: - 滑动菜单
                     .swipeActions(edge: .trailing, allowsFullSwipe: false, content: {
                         //MARK: deleteButton
                         Button {

@@ -13,19 +13,19 @@ struct MyTextFieldWithUIKit: UIViewRepresentable {
         @Binding var text: String
         @Binding var isFirstResponder: Bool
         var didBecomeFirstResponder = false
-
+        
         var onCommit: () -> Void
-
+        
         init(text: Binding<String>, isFirstResponder: Binding<Bool>, onCommit: @escaping () -> Void) {
             _text = text
             _isFirstResponder = isFirstResponder
             self.onCommit = onCommit
         }
-
+        
         func textFieldDidChangeSelection(_ textField: UITextField) {
             text = textField.text ?? ""
         }
-
+        
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             isFirstResponder = false
             didBecomeFirstResponder = false
@@ -42,7 +42,7 @@ struct MyTextFieldWithUIKit: UIViewRepresentable {
             isFirstResponder = true
         }
     }
-
+    
     @Binding var text: String
     var placeholder: String
     var titleUIFont:UIFont
@@ -54,12 +54,12 @@ struct MyTextFieldWithUIKit: UIViewRepresentable {
     var textContentType: UITextContentType?
     var textFieldBorderStyle: UITextField.BorderStyle = .none
     var enablesReturnKeyAutomatically: Bool = false
-
+    
     var onCommit: (() -> Void)?
-
+    
     func makeUIView(context: UIViewRepresentableContext<MyTextFieldWithUIKit>) -> UITextField {
         let textField = UITextField(frame: .zero)
-//        textField.font = UIFont.preferredFont(forTextStyle: .headline)
+        //        textField.font = UIFont.preferredFont(forTextStyle: .headline)
         textField.font = titleUIFont
         textField.autocorrectionType = .no
         textField.delegate = context.coordinator
@@ -71,16 +71,16 @@ struct MyTextFieldWithUIKit: UIViewRepresentable {
         textField.textContentType = textContentType
         textField.borderStyle = textFieldBorderStyle
         textField.enablesReturnKeyAutomatically = enablesReturnKeyAutomatically
-
+        
         return textField
     }
-
+    
     func makeCoordinator() -> MyTextFieldWithUIKit.Coordinator {
         return Coordinator(text: $text, isFirstResponder: $isFirstResponder, onCommit: {
             self.onCommit?()
         })
     }
-
+    
     func updateUIView(_ uiView: UITextField, context: UIViewRepresentableContext<MyTextFieldWithUIKit>) {
         uiView.text = text
         if isFirstResponder && !context.coordinator.didBecomeFirstResponder {

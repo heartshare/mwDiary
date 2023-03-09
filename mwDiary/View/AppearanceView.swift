@@ -20,7 +20,7 @@ struct AppearanceView: View {
     @AppStorage("cardLayout") var cardLayout:Int = 1
     @EnvironmentObject var diaryvm:DiaryViewMode
     
-
+    
     
     private let icons:[AppIcon] = [
         AppIcon(iconName: nil, logoName: "icon 1"),
@@ -51,7 +51,7 @@ struct AppearanceView: View {
                                             HeartColor(color: .cyan)
     ]
     
-
+    
     
     
     var body: some View {
@@ -154,7 +154,7 @@ struct AppearanceView: View {
                                                 item.color.SwiftUiColor
                                                     .frame(height:5)
                                                     .frame(maxHeight:.infinity,alignment:.bottom)
-
+                                                
                                             }
                                         }
                                 }
@@ -172,7 +172,7 @@ struct AppearanceView: View {
                                 .onTapGesture {
                                     cardLayout = i
                                 }
-
+                            
                         }
                     }
                 } header: {
@@ -189,8 +189,9 @@ struct AppearanceView: View {
                     Text("MORE")
                 }
                 Spacer()
+                    .listRowSeparator(.hidden)
                 Spacer()
-//                VStack{}.frame(height:45)
+                    .listRowSeparator(.hidden)
             }
         }//list
         .listStyle(.plain)
@@ -218,7 +219,7 @@ struct AppearanceView_Previews: PreviewProvider {
         AppearanceView()
             .environmentObject(DiaryViewMode())
             .preferredColorScheme(.light)
-
+        
     }
 }
 

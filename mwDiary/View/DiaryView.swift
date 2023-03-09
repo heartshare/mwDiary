@@ -69,7 +69,7 @@ struct DiaryView: View {
             .frame(maxWidth:.infinity,maxHeight: .infinity,alignment:filteredDiary==[] ? .center : .topTrailing)
             .padding(.trailing,10)
             .tint(Color(.label))
-
+            
             //MARK: - 弹窗
             if isShowFavToastAlert {
                 if selectEntity?.is_fav == true {
@@ -79,7 +79,7 @@ struct DiaryView: View {
                 }
             }
             if isShowDeleteToastAlert {
-                    ToastAlertView(icon: "",text: "Diary deleted").zIndex(1)
+                ToastAlertView(icon: "",text: "Diary deleted").zIndex(1)
             }
         }//ZStack
         .tint(Color(.label))

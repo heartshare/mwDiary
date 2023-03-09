@@ -38,7 +38,7 @@ struct SettingView: View {
         }
         .padding(18)
         .frame(width: 300)
-//        .background(.ultraThinMaterial)
+        //        .background(.ultraThinMaterial)
         .background(content: {
             appHeartColor.SwiftUiColor.opacity(0.1)
         })
@@ -62,10 +62,10 @@ struct SettingView: View {
                 } label: {
                     Text("Appearance")//外观风格
                 }
-//                .listRowSeparator(.hidden)
-//                .listRowBackground(
-//                    Color(.gray).opacity(0.1)
-//                )
+                //                .listRowSeparator(.hidden)
+                //                .listRowBackground(
+                //                    Color(.gray).opacity(0.1)
+                //                )
                 
                 Spacer()
                 Button {
@@ -73,10 +73,10 @@ struct SettingView: View {
                 } label: {
                     Text("Export Data")
                 }
-//                .listRowBackground(
-//                    Color(.gray).opacity(0.1)
-//                )
-//                .listRowSeparator(.hidden)
+                //                .listRowBackground(
+                //                    Color(.gray).opacity(0.1)
+                //                )
+                //                .listRowSeparator(.hidden)
                 NavigationLink {
                     DefaultDiaryView(editTitle: $editTitle, editText: $editText)
                 } label: {
@@ -89,16 +89,16 @@ struct SettingView: View {
                         editText = defaultBody
                     }
                 }
-//                .listRowBackground(
-//                    Color(.gray).opacity(0.1)
-//                )
-//                .listRowSeparator(.hidden)
+                //                .listRowBackground(
+                //                    Color(.gray).opacity(0.1)
+                //                )
+                //                .listRowSeparator(.hidden)
                 Spacer()
                 Link(destination: URL(string: "mailto:wxmvv@outlook.com")!, label: {Text("Contact")})
-//                    .listRowBackground(
-//                        Color(.gray).opacity(0.1)
-//                    )
-//                    .listRowSeparator(.hidden)
+                //                    .listRowBackground(
+                //                        Color(.gray).opacity(0.1)
+                //                    )
+                //                    .listRowSeparator(.hidden)
                 
             }
             //            .listStyle(.plain)
