@@ -30,6 +30,8 @@
 "MORE" = "其他";
 "Small Title" = "小标题";
 "Title style above every page" = "每个页面顶部的标题大小";
+"Show Mood Card" = "显示心情卡片";
+"Mood Card in SettingView" = "在设置页面最上面";
 
 "I am title!" = "我是标题！";
 "This is a preview window, tap to change the list layout .This is a preview window, tap to change the list layout ." = "这是一个预览窗口，点击可以更改日记布局。 这是一个预览窗口，点击可以更改日记布局。";
@@ -59,3 +61,7 @@
 "Are you sure?" = "确认吗";
 "Your diary Modified" = "已修改";
 "Save the Modified date?" = "是否修改？";
+
+
+
+

@@ -30,6 +30,8 @@
 "MORE" = "MORE";
 "Small Title" = "Small Title";
 "Title style above every page" = "Title style above every page";
+"Show Mood Card" = "Show Mood Card";
+"Mood Card in SettingView" = "Mood Card in SettingView";
 
 "I am title!" = "I am title!";
 "This is a preview window, tap to change the list layout .This is a preview window, tap to change the list layout ." = "This is a preview window, tap to change the list layout .This is a preview window, tap to change the list layout .";
@@ -59,5 +61,6 @@
 "Are you sure?" = "Are you sure?";
 "Your diary Modified" = "Your diary Modified";
 "Save the Modified date?" = "Save the Modified date?";
+
 
 

@@ -7,6 +7,43 @@
 
 import SwiftUI
 
+struct minimalMoodCard:View{
+    var mymood:MoodType = .none
+    @AppStorage("heartColor") var appHeartColor:HeartColorType = .yellow
+    var body:some View{
+        HStack{
+            VStack(alignment: .leading,spacing: 10){
+                Text(mymood.title)
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .lineLimit(1)
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                Text(mymood.body)
+                //                .lineLimit(3)
+                    .font(.headline)
+                    .frame(maxHeight: .infinity,alignment: .top)
+            }
+            .padding(20)
+            .frame(minWidth: 300,maxWidth: 480,minHeight: 180,maxHeight: 280)
+            .background(content: {
+                //                LinearGradient(colors:[Color("whiteblack"),appHeartColor.SwiftUiColor] , startPoint: .leading, endPoint: .trailing)
+                appHeartColor.SwiftUiColor
+                    .opacity(0.3)
+            })
+            .cornerRadius(20)
+            //            .shadow(color: .primary.opacity(0.8), radius: 6,x: 2,y: 2)
+            //            .blur(radius: -10)
+            //            .onHover { true in
+            //                <#code#>
+            //            }
+        }
+        
+        .padding(.vertical,12)
+        .listRowSeparator(.hidden)
+    }
+}
+
+
 struct SettingView: View {
     
     @AppStorage("appTheme") var appTheme:ThemeType = .Automatic
@@ -18,65 +55,66 @@ struct SettingView: View {
     
     @AppStorage("defaultTitle") var defaultTitle = "My daily mood"
     @AppStorage("defaultBody") var defaultBody = ""
+    @AppStorage("showMoodCard") var showMoodCard = false
     @State var editTitle:String = ""
     @State var editText:String = ""
     
+    @State var editMood:Bool = false
+    @AppStorage("mymood") var mymood:MoodType = .none
+    
+    let mymoods:[MoodType] = [
+        .happy,.boring,.sweet,.sad,.empty
+    ]
+    
     var body: some View {
-        //                kakeSettingView
         minimalSettingView
+        // kakeSettingView
     }//body
     
-    var minimalHelloCard:some View{
-        VStack(alignment: .leading,spacing: 10){
-            Text("Hello world~")
-                .font(.title)
-                .fontWeight(.semibold)
-            Text("Write your diary here,make all things simple.")
-                .lineLimit(2)
-            Link(destination: URL(string: "mailto:wxmvv@outlook.com")!, label: {Text("Contact").foregroundColor(.blue)}
-            )
-        }
-        .padding(18)
-        .frame(width: 300)
-        //        .background(.ultraThinMaterial)
-        .background(content: {
-            appHeartColor.SwiftUiColor.opacity(0.1)
-        })
-        .cornerRadius(10)
-        
-    }
+    
     var minimalSettingView:some View{
         NavigationView {
             List{
-                //                Spacer()
-                //                    .listRowSeparator(.hidden)
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack{
-                        minimalHelloCard
+                if showMoodCard {
+                    if editMood{
+                        ForEach(mymoods,id: \.self){mood in
+                            minimalMoodCard(mymood: mood)
+                                .onTapGesture {
+                                    withAnimation(.easeInOut(duration: 0.4)) {
+                                        mymood = mood
+                                        editMood.toggle()
+                                    }
+                                }
+                        }
+                    }else{
+                        minimalMoodCard(mymood: mymood)
+                            .onTapGesture {
+                                withAnimation(.easeInOut(duration: 0.4)) {
+                                    editMood.toggle()
+                                }
+                            }
                     }
                 }
-                .listRowSeparator(.hidden)
-                Spacer()
                 NavigationLink {
                     AppearanceView()
                 } label: {
                     Text("Appearance")//外观风格
                 }
-                //                .listRowSeparator(.hidden)
-                //                .listRowBackground(
-                //                    Color(.gray).opacity(0.1)
-                //                )
-                
+                .listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .leading)
+                .padding(.horizontal,24)
+                .background(Color.gray.opacity(0.1))
                 Spacer()
                 Button {
                     diaryvm.exportAllToCSV()
                 } label: {
                     Text("Export Data")
-                }
-                //                .listRowBackground(
-                //                    Color(.gray).opacity(0.1)
-                //                )
-                //                .listRowSeparator(.hidden)
+                }.listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .padding(.horizontal,24)
+                    .background(Color.gray.opacity(0.1))
                 NavigationLink {
                     DefaultDiaryView(editTitle: $editTitle, editText: $editText)
                 } label: {
@@ -89,29 +127,30 @@ struct SettingView: View {
                         editText = defaultBody
                     }
                 }
-                //                .listRowBackground(
-                //                    Color(.gray).opacity(0.1)
-                //                )
-                //                .listRowSeparator(.hidden)
+                .listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                .padding(.horizontal,24)
+                .background(Color.gray.opacity(0.1))
                 Spacer()
                 Link(destination: URL(string: "mailto:wxmvv@outlook.com")!, label: {Text("Contact")})
-                //                    .listRowBackground(
-                //                        Color(.gray).opacity(0.1)
-                //                    )
-                //                    .listRowSeparator(.hidden)
-                
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .padding(.horizontal,24)
+                    .background(Color.gray.opacity(0.1))
             }
-            //            .listStyle(.plain)
-            .listStyle(.inset)
+            .tint(appHeartColor.SwiftUiColor)
+            .listStyle(.plain)
             .navigationTitle("Setting")
             .navigationBarTitleDisplayMode(smallTitle ? .inline:.large)
-            
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        
-        
     }
     
+    
+    
+    //kake
     var kakeSettingView:some View{
         NavigationView {
             List{
@@ -122,9 +161,7 @@ struct SettingView: View {
                         Label("Appearance", systemImage: "paintpalette.fill")
                             .font(.subheadline)
                             .frame(height: 33)
-                        
                     }
-                    
                     Button {
                         diaryvm.exportAllToCSV()
                     } label: {
@@ -132,7 +169,6 @@ struct SettingView: View {
                             .font(.subheadline)
                             .frame(height: 33)
                     }
-                    
                     //TODO: - icloud
                     //                        Toggle(isOn: $isICloud) {
                     //                            Label("iCloud Sync", systemImage: "icloud.circle.fill")
@@ -140,20 +176,15 @@ struct SettingView: View {
                     //                                .frame(height: 33)
                     //                        }
                     //                        .tint(appHeartColor.SwiftUiColor)
-                    
-                    
                 } header:{
                     Text("GENERAL")
                 }
-                
                 //TODO: - 内购
                 //                    Section{
                 //                        Label("Premium Features", systemImage: "crown")
                 //                    } header:{
                 //                    Text("PREMIUM")
                 //                }
-                
-                
                 //MARK: - defaultTitle
                 Section {
                     NavigationLink {
@@ -162,9 +193,6 @@ struct SettingView: View {
                         Label("Default Diary", systemImage: "doc.text")
                             .font(.subheadline)
                             .frame(height: 33)
-                        //                            .onTapGesture {
-                        //
-                        //                            }
                     }.onAppear {
                         if defaultTitle != "My daily mood" && defaultTitle != "" {
                             editTitle = defaultTitle
@@ -176,8 +204,6 @@ struct SettingView: View {
                 } header: {
                     Text("TEMPLATE")
                 }
-                
-                
                 Section{
                     Link(destination: URL(string: "mailto:wxmvv@outlook.com")!, label: {Label("Contact", systemImage: "link.circle.fill")})
                         .font(.subheadline)
@@ -191,19 +217,15 @@ struct SettingView: View {
                 } header:{
                     Text("OTHERS")
                 }
-                
             }//list
-            
             .tint(Color(.label))
             .labelStyle(.titleAndIcon)
             .listStyle(.plain)
             .navigationTitle("Setting")
             .navigationBarTitleDisplayMode(.inline)
-            
         }//nav
         .navigationViewStyle(StackNavigationViewStyle())
     }
-    
     
     
 }

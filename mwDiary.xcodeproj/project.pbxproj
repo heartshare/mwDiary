@@ -246,12 +246,12 @@
 			isa = PBXGroup;
 			children = (
 				C453B0C028E285220042B671 /* PreferenceKey.swift */,
-				C400CE0928EFD23D00FD00A5 /* MoodType.swift */,
 				C453B0C128E285220042B671 /* Tab.swift */,
 				C4E54C1128E2E4C300C1B9CA /* Theme.swift */,
 				C40E0E4828E3FDE400F33F21 /* AppIcon.swift */,
 				C40E0E4628E3FDBD00F33F21 /* HeartColor.swift */,
 				C410B2BD29B46F2600CECD42 /* FontStyle.swift */,
+				C400CE0928EFD23D00FD00A5 /* MoodType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -594,7 +594,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MARKETING_VERSION = 0.8.2;
+				MARKETING_VERSION = 0.8.3;
 				PRODUCT_BUNDLE_IDENTIFIER = wxm.mwDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -637,7 +637,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MARKETING_VERSION = 0.8.2;
+				MARKETING_VERSION = 0.8.3;
 				PRODUCT_BUNDLE_IDENTIFIER = wxm.mwDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

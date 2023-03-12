@@ -5,7 +5,7 @@
 //  Created by wxm on 2022/9/27.
 //
 
-import SwiftUI
+//import SwiftUI
 
 //struct testView: View {
 //    @State var a:Int = 1

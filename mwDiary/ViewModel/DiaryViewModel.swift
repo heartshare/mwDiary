@@ -150,11 +150,29 @@ class DiaryViewMode:ObservableObject{
         //弹出分享栏
         var filesToShare = [Any]()
         filesToShare.append(path!)
+            
         let av = UIActivityViewController(activityItems: filesToShare, applicationActivities: nil)
-        UIApplication.shared.connectedScenes
-            .map({ $0 as? UIWindowScene })
-            .compactMap({ $0 })
-            .first?.windows.first!.rootViewController?.present(av, animated: true, completion: nil)
+        //MARK: ipad分享问题
+        //参考 https://blog.csdn.net/madaxin/article/details/118482938
+        if UIDevice.current.model.lowercased()=="ipad"{
+            let sourceView = UIApplication.shared.windows[0].rootViewController!.view
+            var frame = sourceView!.frame
+            frame.size.height /= 2
+            frame.origin.x = 0
+            frame.origin.y = 0
+            av.popoverPresentationController?.sourceView = sourceView
+            av.popoverPresentationController?.sourceRect = frame
+            av.popoverPresentationController?.permittedArrowDirections = .up
+            UIApplication.shared.connectedScenes
+                .map({ $0 as? UIWindowScene })
+                .compactMap({ $0 })
+                .first?.windows.first!.rootViewController?.present(av, animated: true, completion: nil)
+        }else{
+            UIApplication.shared.connectedScenes
+                .map({ $0 as? UIWindowScene })
+                .compactMap({ $0 })
+                .first?.windows.first!.rootViewController?.present(av, animated: true, completion: nil)
+        }
         isShareSheetShowing.toggle()
         
     }

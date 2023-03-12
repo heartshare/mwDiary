@@ -68,6 +68,7 @@ struct DiaryView: View {
             .frame(width: 50, height: 50)
             .frame(maxWidth:.infinity,maxHeight: .infinity,alignment:filteredDiary==[] ? .center : .topTrailing)
             .padding(.trailing,10)
+            .padding(.top,40)
             .tint(Color(.label))
             
             //MARK: - 弹窗
