@@ -27,6 +27,37 @@ body {
     font-size: 1.75vw;
   }
 }
+a {
+  text-decoration: none;
+  background: none;
+  border: 0.1px solid;
+  font: inherit;
+  line-height: 2.4;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 0.2em 0.5em;
+}
+a {
+  color: var(--color);
+  transition: 0.25s;
+}
+a:hover, a:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+.offset {
+  box-shadow: 0.1em 0.1em 0 0 var(--color), inset 0.1em 0.1em 0 0 var(--color);
+}
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.offset {
+  --color: #020202;
+  --hover: #000a10;
+}
+
+
 /*================================================
 Start Important Part
 ==================================================*/
