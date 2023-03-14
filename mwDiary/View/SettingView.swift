@@ -7,43 +7,6 @@
 
 import SwiftUI
 
-struct minimalMoodCard:View{
-    var mymood:MoodType = .none
-    @AppStorage("heartColor") var appHeartColor:HeartColorType = .yellow
-    var body:some View{
-        HStack{
-            VStack(alignment: .leading,spacing: 10){
-                Text(mymood.title)
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .lineLimit(1)
-                    .frame(maxWidth: .infinity,alignment: .leading)
-                Text(mymood.body)
-                //                .lineLimit(3)
-                    .font(.headline)
-                    .frame(maxHeight: .infinity,alignment: .top)
-            }
-            .padding(20)
-            .frame(minWidth: 300,maxWidth: 480,minHeight: 180,maxHeight: 280)
-            .background(content: {
-                //                LinearGradient(colors:[Color("whiteblack"),appHeartColor.SwiftUiColor] , startPoint: .leading, endPoint: .trailing)
-                appHeartColor.SwiftUiColor
-                    .opacity(0.3)
-            })
-            .cornerRadius(20)
-            //            .shadow(color: .primary.opacity(0.8), radius: 6,x: 2,y: 2)
-            //            .blur(radius: -10)
-            //            .onHover { true in
-            //                <#code#>
-            //            }
-        }
-        
-        .padding(.vertical,12)
-        .listRowSeparator(.hidden)
-    }
-}
-
-
 struct SettingView: View {
     
     @AppStorage("appTheme") var appTheme:ThemeType = .Automatic
@@ -78,7 +41,7 @@ struct SettingView: View {
                 if showMoodCard {
                     if editMood{
                         ForEach(mymoods,id: \.self){mood in
-                            minimalMoodCard(mymood: mood)
+                            MinimalStyleMoodCard(mymood: mood)
                                 .onTapGesture {
                                     withAnimation(.easeInOut(duration: 0.4)) {
                                         mymood = mood
@@ -87,7 +50,7 @@ struct SettingView: View {
                                 }
                         }
                     }else{
-                        minimalMoodCard(mymood: mymood)
+                        MinimalStyleMoodCard(mymood: mymood)
                             .onTapGesture {
                                 withAnimation(.easeInOut(duration: 0.4)) {
                                     editMood.toggle()

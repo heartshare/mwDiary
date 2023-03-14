@@ -96,7 +96,8 @@ struct DiaryListView: View {
             .listRowInsets(EdgeInsets())
             
             //在iOS15中 safe问题解决方法
-            VStack{}.frame(height: 45).listRowSeparator(.hidden).listRowInsets(EdgeInsets())
+            Spacer().listRowSeparator(.hidden)
+//                .listRowInsets(EdgeInsets())
             
         }//list
         .listStyle(.plain)

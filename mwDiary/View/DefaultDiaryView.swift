@@ -99,7 +99,7 @@ struct DefaultDiaryView: View {
             //            .navigationViewStyle(StackNavigationViewStyle())
             if isShowSaveAlert {
 //                ToastAlertView(icon: "",text: "Saved Default Diary").zIndex(1)
-                ToastAlertView(icon: "",text: "OK！").zIndex(1)
+                MyToastAlertView(icon: "",text: "OK！").zIndex(1)
             }
             
         }

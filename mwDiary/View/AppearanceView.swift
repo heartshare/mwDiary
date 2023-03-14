@@ -42,8 +42,6 @@ struct AppearanceView: View {
     ]
     
     
-    
-    
     var body: some View {
         List{
             Group{

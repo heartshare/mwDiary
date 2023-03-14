@@ -41,7 +41,6 @@ struct JournalView: View {
     
     var body: some View {
         ZStack {
-            
             NavigationView {
                 VStack{
                     DiaryListView(
@@ -62,6 +61,7 @@ struct JournalView: View {
                 .searchable(text:$searchStr,prompt: "")
                 .navigationTitle("Search")
             }
+            .onTapGesture {withAnimation (.easeInOut){isShowDatePicker = false}}
             .navigationViewStyle(StackNavigationViewStyle())
             
             //MARK: - toolBar
@@ -86,13 +86,13 @@ struct JournalView: View {
             //MARK: - 弹窗
             if isShowFavToastAlert {
                 if selectEntity?.is_fav == true {
-                    ToastAlertView(icon: "heart",text: "Add to Favs").zIndex(1)
+                    MyToastAlertView(icon: "heart",text: "Add to Favs").zIndex(1)
                 } else {
-                    ToastAlertView(icon: "heart.slash",text: "Remove from Favs").zIndex(1)
+                    MyToastAlertView(icon: "heart.slash",text: "Remove from Favs").zIndex(1)
                 }
             }
             if isShowDeleteToastAlert {
-                ToastAlertView(icon: "",text: "Diary deleted").zIndex(1)
+                MyToastAlertView(icon: "",text: "Diary deleted").zIndex(1)
             }
             //MARK: - 弹窗datepicker
             if isShowDatePicker {

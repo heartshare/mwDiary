@@ -74,13 +74,13 @@ struct DiaryView: View {
             //MARK: - 弹窗
             if isShowFavToastAlert {
                 if selectEntity?.is_fav == true {
-                    ToastAlertView(icon: "heart",text: "Add to Favs").zIndex(1)
+                    MyToastAlertView(icon: "heart",text: "Add to Favs").zIndex(1)
                 } else {
-                    ToastAlertView(icon: "heart.slash",text: "Remove from Favs").zIndex(1)
+                    MyToastAlertView(icon: "heart.slash",text: "Remove from Favs").zIndex(1)
                 }
             }
             if isShowDeleteToastAlert {
-                ToastAlertView(icon: "",text: "Diary deleted").zIndex(1)
+                MyToastAlertView(icon: "",text: "Diary deleted").zIndex(1)
             }
         }//ZStack
         .tint(Color(.label))

@@ -14,6 +14,7 @@
 		C40E0E4D28E44F6A00F33F21 /* listening-music.json in Resources */ = {isa = PBXBuildFile; fileRef = C40E0E4C28E44F6A00F33F21 /* listening-music.json */; };
 		C40E0E4F28E567DA00F33F21 /* DefaultDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E0E4E28E567DA00F33F21 /* DefaultDiaryView.swift */; };
 		C410B2BE29B46F2600CECD42 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410B2BD29B46F2600CECD42 /* FontStyle.swift */; };
+		C42745DE29C059ED00CEE649 /* MinimalStyleMoodCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42745DD29C059ED00CEE649 /* MinimalStyleMoodCard.swift */; };
 		C453B08128E284A50042B671 /* mwDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B08028E284A50042B671 /* mwDiaryApp.swift */; };
 		C453B08628E284A50042B671 /* mwDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C453B08428E284A50042B671 /* mwDiary.xcdatamodeld */; };
 		C453B08A28E284A80042B671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C453B08928E284A80042B671 /* Assets.xcassets */; };
@@ -25,7 +26,7 @@
 		C453B0D728E285230042B671 /* MyTextFieldWithUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0B728E285220042B671 /* MyTextFieldWithUIKit.swift */; };
 		C453B0D828E285230042B671 /* DiaryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0B828E285220042B671 /* DiaryCardView.swift */; };
 		C453B0D928E285230042B671 /* DiaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0B928E285220042B671 /* DiaryListView.swift */; };
-		C453B0DA28E285230042B671 /* ToastAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0BA28E285220042B671 /* ToastAlertView.swift */; };
+		C453B0DA28E285230042B671 /* MyToastAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0BA28E285220042B671 /* MyToastAlertView.swift */; };
 		C453B0DB28E285230042B671 /* MyDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0BB28E285220042B671 /* MyDatePicker.swift */; };
 		C453B0DC28E285230042B671 /* DiaryCardLayOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0BC28E285220042B671 /* DiaryCardLayOutView.swift */; };
 		C453B0DD28E285230042B671 /* DiaryEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C453B0BD28E285220042B671 /* DiaryEditView.swift */; };
@@ -68,6 +69,7 @@
 		C40E0E4C28E44F6A00F33F21 /* listening-music.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "listening-music.json"; sourceTree = "<group>"; };
 		C40E0E4E28E567DA00F33F21 /* DefaultDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDiaryView.swift; sourceTree = "<group>"; };
 		C410B2BD29B46F2600CECD42 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		C42745DD29C059ED00CEE649 /* MinimalStyleMoodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalStyleMoodCard.swift; sourceTree = "<group>"; };
 		C453B07D28E284A50042B671 /* mwDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mwDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C453B08028E284A50042B671 /* mwDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mwDiaryApp.swift; sourceTree = "<group>"; };
 		C453B08528E284A50042B671 /* mwDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mwDiary.xcdatamodel; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		C453B0B728E285220042B671 /* MyTextFieldWithUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextFieldWithUIKit.swift; sourceTree = "<group>"; };
 		C453B0B828E285220042B671 /* DiaryCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryCardView.swift; sourceTree = "<group>"; };
 		C453B0B928E285220042B671 /* DiaryListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryListView.swift; sourceTree = "<group>"; };
-		C453B0BA28E285220042B671 /* ToastAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastAlertView.swift; sourceTree = "<group>"; };
+		C453B0BA28E285220042B671 /* MyToastAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyToastAlertView.swift; sourceTree = "<group>"; };
 		C453B0BB28E285220042B671 /* MyDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDatePicker.swift; sourceTree = "<group>"; };
 		C453B0BC28E285220042B671 /* DiaryCardLayOutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryCardLayOutView.swift; sourceTree = "<group>"; };
 		C453B0BD28E285220042B671 /* DiaryEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryEditView.swift; sourceTree = "<group>"; };
@@ -128,20 +130,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C400CE1328F1BC9500FD00A5 /* DiaryCard */ = {
+		C400CE1328F1BC9500FD00A5 /* Diary Card */ = {
 			isa = PBXGroup;
 			children = (
+				C453B0B928E285220042B671 /* DiaryListView.swift */,
 				C453B0B828E285220042B671 /* DiaryCardView.swift */,
 				C453B0BC28E285220042B671 /* DiaryCardLayOutView.swift */,
-				C453B0B928E285220042B671 /* DiaryListView.swift */,
 			);
-			path = DiaryCard;
+			path = "Diary Card";
 			sourceTree = "<group>";
 		};
 		C400CE1428F1C95900FD00A5 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				C453B0BA28E285220042B671 /* ToastAlertView.swift */,
+				C453B0BA28E285220042B671 /* MyToastAlertView.swift */,
 				C453B0BB28E285220042B671 /* MyDatePicker.swift */,
 				C453B0B728E285220042B671 /* MyTextFieldWithUIKit.swift */,
 			);
@@ -156,6 +158,14 @@
 				C4EC4AC129B84D210064A1E6 /* SmileySans-Oblique.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C42745DF29C05A6B00CEE649 /* Mood Card */ = {
+			isa = PBXGroup;
+			children = (
+				C42745DD29C059ED00CEE649 /* MinimalStyleMoodCard.swift */,
+			);
+			path = "Mood Card";
 			sourceTree = "<group>";
 		};
 		C453B07428E284A50042B671 = {
@@ -235,8 +245,9 @@
 		C453B0B628E285220042B671 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C400CE1328F1BC9500FD00A5 /* Diary Card */,
+				C42745DF29C05A6B00CEE649 /* Mood Card */,
 				C400CE1428F1C95900FD00A5 /* Others */,
-				C400CE1328F1BC9500FD00A5 /* DiaryCard */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -409,7 +420,7 @@
 				C4E54C0F28E2E41600C1B9CA /* BlankButtonStyle.swift in Sources */,
 				C453B08628E284A50042B671 /* mwDiary.xcdatamodeld in Sources */,
 				C40E0E4F28E567DA00F33F21 /* DefaultDiaryView.swift in Sources */,
-				C453B0DA28E285230042B671 /* ToastAlertView.swift in Sources */,
+				C453B0DA28E285230042B671 /* MyToastAlertView.swift in Sources */,
 				C453B0E528E285230042B671 /* Date+.swift in Sources */,
 				C453B08128E284A50042B671 /* mwDiaryApp.swift in Sources */,
 				C453B0E928E285230042B671 /* AppearanceView.swift in Sources */,
@@ -420,6 +431,7 @@
 				C453B0E328E285230042B671 /* MyFormatter.swift in Sources */,
 				C453B0D928E285230042B671 /* DiaryListView.swift in Sources */,
 				C453B0DD28E285230042B671 /* DiaryEditView.swift in Sources */,
+				C42745DE29C059ED00CEE649 /* MinimalStyleMoodCard.swift in Sources */,
 				C4E54C1228E2E4C300C1B9CA /* Theme.swift in Sources */,
 				C410B2BE29B46F2600CECD42 /* FontStyle.swift in Sources */,
 				C453B0E828E285230042B671 /* ContentView.swift in Sources */,

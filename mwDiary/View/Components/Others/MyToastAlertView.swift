@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ToastAlertView:View {
+struct MyToastAlertView:View {
     var icon:String = "heart"
     var text:String = "Add to Favs"
     var body: some View{
@@ -30,7 +30,7 @@ struct ToastAlertView:View {
 
 struct ToastAlertView_Previews: PreviewProvider {
     static var previews: some View {
-        ToastAlertView()
+        MyToastAlertView()
             .preferredColorScheme(.dark)
     }
 }
